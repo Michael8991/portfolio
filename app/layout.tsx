@@ -1,17 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Montserrat, Anton, Orbitron} from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+const anton = Anton({
+  subsets: ["latin"],
+  variable: "--font-anton",
+  weight: ["400"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const orbitron = Orbitron({
   subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${montserrat.variable} ${anton.variable} ${orbitron.variable}`}>
+      <body>
         {children}
       </body>
     </html>
