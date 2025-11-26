@@ -1,0 +1,41 @@
+<svg
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Fondo general transparente (para favicon) -->
+  <rect width="512" height="512" fill="none" />
+
+  <!-- Cuadrado tipo terminal -->
+  <rect
+    x="64"
+    y="64"
+    width="384"
+    height="384"
+    rx="96"
+    ry="96"
+    fill="#020617"
+  />
+
+  <!-- Símbolo ">" -->
+  <path
+    d="M190 180 L250 220 L190 260"
+    fill="none"
+    stroke="#22c55e"
+    stroke-width="24"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Cursor (bloque) -->
+  <rect
+    x="280"
+    y="210"
+    width="60"
+    height="40"
+    rx="8"
+    ry="8"
+    fill="#22c55e"
+  />
+</svg>
