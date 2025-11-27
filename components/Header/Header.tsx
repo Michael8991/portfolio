@@ -9,15 +9,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 const navItems = [
-  { href: "#hero", label: "Inicio", icon: faHouse },
-  { href: "#about", label: "Sobre mí", icon: faUser },
-  { href: "#projects", label: "Proyectos", icon: faFolder },
-  { href: "#contact", label: "Contacto", icon: faPenToSquare },
+  { href: "#hero-section", label: "Inicio", icon: faHouse },
+  { href: "#about-section", label: "Sobre mí", icon: faUser },
+  { href: "#projects-section", label: "Proyectos", icon: faFolder },
+  { href: "#contact-section", label: "Contacto", icon: faPenToSquare },
 ];
 
 export default function Header() {
   return (
-    <header className="w-full flex justify-center p-5 fixed">
+    <header className="w-full flex justify-center p-5 fixed z-10">
       <nav className="flex items-center gap-5 rounded-2xl bg-body-secondary px-5 py-2 shadow-lg/20 ">
         {navItems.map((item) => (
           <Link

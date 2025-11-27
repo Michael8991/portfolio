@@ -16,21 +16,21 @@ export default function HeroSection() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <section id="hero-section" className="@container min-h-screen pt-35">
-      <div className="min-h-screen grid grid-cols-3 max-w-7xl m-auto">
+    <section id="hero-section" className="@container min-h-screen pt-35 pb-10">
+      <div className="min-h-screen grid grid-cols-1 xl:grid-cols-3 max-w-7xl m-auto">
         <div className="flex flex-col items-center">
           <MainCard />
         </div>
-        <div className="col-span-2">
-          <h1 className="title-tech-font text-6xl font-extrabold tracking-wide">
-            JUNIOR FULLSTACK
+        <div className="mt-4 lg:mt-0 col-span-2">
+          <h1 className="title-tech-font text-3xl max-xl:text-center md:text-5xl lg:text-6xl font-extrabold tracking-wide">
+            FULLSTACK
           </h1>
-          <div className="flex items-center">
-            <h2 className="title-tech-font text-6xl font-extrabold tracking-wide mt-2 text-white/30">
+          <div className="max-xl:flex-col max-xl:justify-center flex items-center">
+            <h2 className="title-tech-font text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mt-2 text-white/30">
               DEVELOPER
             </h2>
             <a
-              className="ms-auto flex items-center hover:scale-105 transition duration-200 ease-in-out"
+              className="ms-auto max-xl:m-auto max-xl:mt-3 flex items-center hover:scale-105 transition duration-200 ease-in-out"
               href=""
             >
               <div className="flex items-center  bg-white text-black p-3 rounded-2xl">
@@ -46,29 +46,29 @@ export default function HeroSection() {
                       d="M8 24 L24 8"
                       fill="none"
                       stroke="#fff"
-                      stroke-width="4"
-                      stroke-linecap="round"
+                      strokeWidth="4"
+                      strokeLinecap="round"
                     />
                     <path
                       d="M16 8 H24 V16"
                       fill="none"
                       stroke="#fff"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </div>
               </div>
             </a>
           </div>
-          <p className="mt-5 text-white/80 font-light">
+          <p className="mt-5 text-white/80 font-light max-xl:text-center max-xl:mx-2">
             Desarrollo aplicaciones claras, modernas y bien estructuradas,
             combinando frontend y backend con un enfoque práctico y orientado a
             resultados.
           </p>
           <div className="flex items-center justify-start mt-8">
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-start relative lg:mx-10 xl:mx-0">
               <motion.div
                 className="relative h-16 w-30 flex items-center justify-center"
                 onHoverStart={() => setHovered(true)}
@@ -146,16 +146,13 @@ export default function HeroSection() {
                 <span className="font-medium">Conecta</span>
                 <span className="font-medium">conmigo</span>
               </motion.div>
-              <div>
+              <div className="max-md:absolute max-md:z-0 max-md:left-20">
                 <svg
                   width="214"
                   height="96"
                   viewBox="0 0 214 96"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Fondo oscuro (opcional) */}
-                  <rect width="214" height="96" fill="none" />
-
                   {/* Trazo ondulado discontinuo */}
                   <path
                     d="M15 60
@@ -164,9 +161,9 @@ export default function HeroSection() {
                       S 155 20, 185 25"
                     fill="none"
                     stroke="#666666"
-                    stroke-width="6"
-                    stroke-linecap="round"
-                    stroke-dasharray="8 10"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeDasharray="8 10"
                   />
 
                   {/* Flecha al final (sólida) */}
@@ -174,9 +171,9 @@ export default function HeroSection() {
                     d="M178 18 L190 25 L182 35"
                     fill="none"
                     stroke="#666666"
-                    stroke-width="6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
@@ -193,9 +190,9 @@ export default function HeroSection() {
                   d="M20 30 L40 48 L20 66"
                   fill="none"
                   stroke="#F29057"
-                  stroke-width="8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
 
                 {/* Guion bajo _ */}
@@ -205,13 +202,13 @@ export default function HeroSection() {
                   x2="76"
                   y2="66"
                   stroke="#F29057"
-                  stroke-width="8"
-                  stroke-linecap="round"
+                  strokeWidth="8"
+                  strokeLinecap="round"
                 />
               </svg>
             </div>
           </div>
-          <div className="grid grid-cols-2 items-center justify-center gap-3 mt-10">
+          <div className="grid grid-cols-1 mx-4 lg:grid-cols-2 items-center justify-center gap-3 mt-10">
             <div className=" bg-[#F29057] rounded-xl p-3 mt-5">
               <p className="text-[#fcd8c4] text-md uppercase font-bold">
                 <FontAwesomeIcon

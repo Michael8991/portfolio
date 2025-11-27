@@ -2,6 +2,7 @@ import Image from "next/image";
 import photoCV from "@/public/michaelPhoto.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationPin, faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
 export default function MainCard() {
   return (
@@ -26,14 +27,14 @@ export default function MainCard() {
           <FontAwesomeIcon icon={faLocationPin} />
           Málaga, España
         </span>
-        <span className="text-gray-700 gap-1 flex items-center">
+        <span className="text-[#00c203c0] gap-1 flex items-center mt-4">
           <FontAwesomeIcon
-            icon={faCircle}
-            size="2xs"
-            style={{ color: "#00c203" }}
-            className="pulse-latency"
+            icon={faCircleCheck}
+            size="sm"
+            style={{ color: "#00c203c0" }}
+            className=""
           />
-          En búsqueda activa de empleo
+          Open to Work
         </span>
       </div>
     </div>
