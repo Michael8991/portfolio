@@ -1,2 +1,4 @@
-import MainCard from "./MainCard";  
-export { MainCard };
+import MainCard from "./MainCard";
+import ProjectCard from "./ProjectCard";
+
+export { MainCard, ProjectCard };
