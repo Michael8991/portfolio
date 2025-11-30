@@ -1,10 +1,6 @@
 import { Header } from "@/components/Header";
-import {
-  HeroSection,
-  AboutSection,
-  ProjectsSection,
-  ContactSection,
-} from "./sections";
+import { HeroSection, AboutSection, ProjectsSection } from "./sections";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +9,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-      <ContactSection />
+      <Footer />
     </div>
   );
 }
