@@ -11,9 +11,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-
 export default function HeroSection() {
   const [hovered, setHovered] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <section id="hero-section" className="@container min-h-screen pt-35 pb-10">
@@ -34,7 +40,13 @@ export default function HeroSection() {
               href=""
             >
               <div className="flex items-center  bg-white text-black p-3 rounded-2xl">
-                <p>Descargar CV</p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/CV-ESB11-Michael-Rodriguez.pdf"
+                >
+                  Descargar CV
+                </a>
                 <div className="ms-2 bg-[#F29057] rounded-sm">
                   <svg
                     width="24"
@@ -76,7 +88,7 @@ export default function HeroSection() {
               >
                 {/* LinkedIn */}
                 <motion.a
-                  href="https://linkedin.com/in/tu-perfil"
+                  href="https://www.linkedin.com/in/michaelrodrigueziranzo"
                   target="_blank"
                   rel="noreferrer"
                   className="absolute"
@@ -97,7 +109,7 @@ export default function HeroSection() {
 
                 {/* GitHub */}
                 <motion.a
-                  href="https://github.com/tu-usuario"
+                  href="https://github.com/Michael8991"
                   target="_blank"
                   rel="noreferrer"
                   className="absolute"
@@ -118,7 +130,7 @@ export default function HeroSection() {
 
                 {/* Email */}
                 <motion.a
-                  href="mailto:tuemail@correo.com"
+                  href="mailto:michael2002982@gmail.com"
                   className="absolute"
                   animate={{
                     x: hovered ? 60 : 20,
@@ -240,13 +252,18 @@ export default function HeroSection() {
                 <p>MongoDB</p>
                 <p>PHP</p>
               </div>
-              <div className="w-full flex items-center justify-end">
-                <span className="font-medium text-sm">Proyecto</span>
-                <FontAwesomeIcon
-                  icon={faSquareArrowUpRight}
-                  size="xl"
-                  className="hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out "
-                />
+              <div className="w-full group flex items-center justify-end">
+                <button
+                  onClick={() => scrollToSection("projects-section")}
+                  className="font-medium text-sm hover:cursor-pointer"
+                >
+                  Proyecto
+                  <FontAwesomeIcon
+                    icon={faSquareArrowUpRight}
+                    size="xl"
+                    className="group-hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out "
+                  />
+                </button>
               </div>
             </div>
             <div className=" bg-[#C5DB32] rounded-xl p-3 mt-5">
@@ -265,13 +282,18 @@ export default function HeroSection() {
                 <p className="font-medium">Desarrollo de Aplicaciones Web</p>
                 <p className="font-medium">Proyectos Full-Stack</p>
               </div>
-              <div className="w-full flex items-center justify-end">
-                <span className="font-medium text-sm">Sobre mí</span>
-                <FontAwesomeIcon
-                  icon={faSquareArrowUpRight}
-                  size="xl"
-                  className="hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out "
-                />
+              <div className="w-full flex group items-center justify-end ">
+                <button
+                  onClick={() => scrollToSection("about-section")}
+                  className="font-medium text-sm hover:cursor-pointer"
+                >
+                  Sobre mí
+                  <FontAwesomeIcon
+                    icon={faSquareArrowUpRight}
+                    size="xl"
+                    className="group-hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out "
+                  />
+                </button>
               </div>
             </div>
           </div>

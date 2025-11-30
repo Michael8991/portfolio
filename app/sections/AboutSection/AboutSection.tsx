@@ -18,8 +18,8 @@ export default function AboutSection() {
       id="about-section"
       className="@container bg-[#688ea6] min-h-screen"
     >
-      <div className="w-full max-w-7xl py-10 mx-auto grid grid-cols-2 gap-5">
-        <div className="flex flex-col">
+      <div className="w-full max-w-7xl py-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="flex flex-col px-2 mb-5">
           <span className="text-3xl lg:text-5xl font-medium w-full">
             Sobre mí
           </span>
@@ -42,7 +42,7 @@ export default function AboutSection() {
             tengo experiencia con Angular, PHP y Java a nivel académico.
           </p>
         </div>
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col px-2 items-center">
           {/* Education Section */}
           <div className="w-full mx-2 rounded-2xl bg-white shadow-lg p-4 mb-2">
             <div className="flex text-[#688ea6] text-2xl font-semibold gap-2 items-center ">
@@ -83,7 +83,7 @@ export default function AboutSection() {
                 </span>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-2 mt-2 mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 mx-auto">
               <div className="flex items-center text-black/60">
                 <FontAwesomeIcon icon={faSquareFigma} size="lg" />
                 <span className="text-lg">Diseño UX/UI</span>

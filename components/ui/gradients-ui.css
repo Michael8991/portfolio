@@ -1,0 +1,49 @@
+.bg-card-project {
+  background: hsla(159, 35%, 45%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(159, 35%, 45%, 1) 29%,
+    hsla(164, 40%, 32%, 1) 56%,
+    hsla(176, 68%, 12%, 1) 95%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(159, 35%, 45%, 1) 29%,
+    hsla(164, 40%, 32%, 1) 56%,
+    hsla(176, 68%, 12%, 1) 95%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(159, 35%, 45%, 1) 29%,
+    hsla(164, 40%, 32%, 1) 56%,
+    hsla(176, 68%, 12%, 1) 95%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4A9B7F", endColorstr="#317361", GradientType=1 );
+}
+.bg-card-project-pink {
+  background: hsla(298, 68%, 90%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(298, 68%, 90%, 1) 0%,
+    hsla(30, 82%, 91%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(298, 68%, 90%, 1) 0%,
+    hsla(30, 82%, 91%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(298, 68%, 90%, 1) 0%,
+    hsla(30, 82%, 91%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6D5F7", endColorstr="#FBE9D7", GradientType=1 );
+}
