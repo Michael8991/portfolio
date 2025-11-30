@@ -17,7 +17,7 @@ export default function CatalogCaseStudy() {
 
   return (
     <div className="w-full max-w-7xl grid grid-cols-1 mt-10 items-center justify-center">
-      <div className="">
+      <div className="h-full">
         <ProjectCard
           image={CostaSpanishMockup}
           alt="Costa Spanish Academy Project Image"

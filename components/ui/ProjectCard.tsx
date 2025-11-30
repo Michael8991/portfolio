@@ -27,13 +27,19 @@ export default function ProjectCard({
 }) {
   return (
     <div
-      className={`relative rounded-2xl p-4 ${bgColor} w-full h-[450px] grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5 `}
+      className={`relative rounded-2xl p-4 ${bgColor} mx-2 lg:mx-0 max-xl:max-w-full xl:w-full h-fit lg:h-[450px] grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 p-5 `}
     >
       <div className="lg:col-span-2 xl:col-span-3 flex flex-col h-full px-5">
-        <span className="text-3xl font-semibold mb-2 text-black">{title}</span>
-        <span className="text-lg font-light text-black/60">{subtitle}</span>
-        <p className="text-md font-normal text-black/80 my-auto">{desc}</p>
-        <div className="flex flex-wrap gap-2">
+        <span className="max-lg:text-center text-3xl font-semibold mb-2 text-black">
+          {title}
+        </span>
+        <span className="max-lg:text-center text-lg font-light text-black/60">
+          {subtitle}
+        </span>
+        <p className="max-lg:text-center text-md font-normal text-black/80 my-auto">
+          {desc}
+        </p>
+        <div className="max-lg:justify-center flex flex-wrap gap-2 my-4">
           <a
             target="_blank"
             className="text-base text-black/80 items-center justify-center gap-2"
@@ -60,12 +66,14 @@ export default function ProjectCard({
           ))}
         </div>
       </div>
-      <Image
-        src={image}
-        alt={alt}
-        height={500}
-        className="drop-shadow-2xl md:absolute md:top-[-55px] md:right-0 mx-auto "
-      />
+      <div>
+        <Image
+          src={image}
+          alt={alt}
+          height={500}
+          className="drop-shadow-2xl md:absolute md:top-[-55px] md:right-0 mx-auto "
+        />
+      </div>
     </div>
   );
 }

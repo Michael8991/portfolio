@@ -36,17 +36,13 @@ export default function HeroSection() {
               DEVELOPER
             </h2>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="/CV-ESB11-Michael-Rodriguez.pdf"
               className="ms-auto max-xl:m-auto max-xl:mt-3 flex items-center hover:scale-105 transition duration-200 ease-in-out"
-              href=""
             >
               <div className="flex items-center  bg-white text-black p-3 rounded-2xl">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="/CV-ESB11-Michael-Rodriguez.pdf"
-                >
-                  Descargar CV
-                </a>
+                <span>Descargar CV</span>
                 <div className="ms-2 bg-[#F29057] rounded-sm">
                   <svg
                     width="24"
