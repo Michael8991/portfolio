@@ -47,3 +47,40 @@
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6D5F7", endColorstr="#FBE9D7", GradientType=1 );
 }
+
+/* .bg-card--project-green {
+  background: #3ca55c;
+  background: -webkit-linear-gradient(
+    to right,
+    #b5ac49,
+    #3ca55c
+  );
+  background: linear-gradient(
+    to right,
+    #b5ac49,
+    #3ca55c
+  ); 
+} */
+.bg-card--project-green {
+  background: hsla(120, 93%, 84%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(120, 93%, 84%, 1) 0%,
+    hsla(185, 90%, 51%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(120, 93%, 84%, 1) 0%,
+    hsla(185, 90%, 51%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(120, 93%, 84%, 1) 0%,
+    hsla(185, 90%, 51%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#AFFCAF", endColorstr="#12DFF3", GradientType=1 );
+}

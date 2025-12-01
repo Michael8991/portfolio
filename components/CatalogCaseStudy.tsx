@@ -3,6 +3,7 @@ import CostaSpanishMockup from "@/public/CostaSpanishAcademy/mockup-LandingCosta
 
 export default function CatalogCaseStudy() {
   const descCostaSpanish = `Landing page de alto rendimiento desarrollada con Next.js, TypeScript y Tailwind para una academia de español como lengua extranjera. La plataforma integra SEO avanzado, i18n, formularios de captación orientados a conversión y contenido dinámico extraído desde una base de datos en MongoDB. Su arquitectura modular y escalable está diseñada para evolucionar hacia un LMS completo, incorporando buenas prácticas de accesibilidad, rendimiento y despliegue CI/CD en Vercel.`;
+
   const catCostaSpanish = [
     "Next.js 14",
     "TypeScript",
@@ -28,10 +29,27 @@ export default function CatalogCaseStudy() {
           codeUrl="https://github.com/Michael8991/costaspanish-academy"
           url="https://www.costaspanishclass.com"
           bgColor="bg-card-project-pink"
+          theme="pink"
+          status="done"
         />
       </div>
-      <div className="h-full"></div>
-    
+      
+      <div className="h-full">
+        <ProjectCard
+          image={CostaSpanishMockup}
+          alt="Otro proyecto"
+          title="Otro proyecto"
+          subtitle="Aplicación web full-stack"
+          desc="..."
+          category={[]}
+          codeUrl="..."
+          url="..."
+          bgColor="bg-card--project-green"
+          theme="black"
+          status="in-progress"
+        />
+      </div>
+     
     </div>
   );
 }
