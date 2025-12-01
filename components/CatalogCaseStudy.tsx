@@ -44,7 +44,7 @@ export default function CatalogCaseStudy() {
           category={[]}
           codeUrl="..."
           url="..."
-          bgColor="bg-card--project-green"
+          bgColor="background-noise-gradient"
           theme="black"
           status="in-progress"
         />

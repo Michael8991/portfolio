@@ -61,7 +61,7 @@
     #3ca55c
   ); 
 } */
-.bg-card--project-green {
+.bg-card-project-green {
   background: hsla(120, 93%, 84%, 1);
 
   background: linear-gradient(
@@ -83,4 +83,34 @@
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#AFFCAF", endColorstr="#12DFF3", GradientType=1 );
+}
+
+.background-noise-gradient {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 226, 197, 0.65) 0%,
+    rgba(61, 93, 122, 1) 55%
+  );
+}
+
+/* ruido */
+.background-noise-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIGZpbGw9IiNmZmYiLz48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJyYW5kb20iIGJhc2VGcmVxdWVuY3k9IjMuNSIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjE1Ii8+PC9zdmc+");
+  opacity: 0.25; /* sube o baja la textura aquí */
+  mix-blend-mode: overlay; /* hace que se fusione natural, sin verlo “pegado” */
+}
+
+/* opción: un leve blur para suavizar la frontera */
+.background-noise-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
 }
