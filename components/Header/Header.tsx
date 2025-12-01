@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full flex justify-center p-5 fixed z-10">
+    <header className="w-full flex justify-center py-5 fixed z-10">
       <nav className="flex items-center gap-5 rounded-2xl bg-body-secondary px-5 py-2 shadow-lg/20 ">
         {navItems.map((item) => (
           <button

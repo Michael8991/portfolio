@@ -22,7 +22,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero-section" className="@container min-h-screen pt-35 pb-10">
+    <section
+      id="hero-section"
+      className="@container min-h-screen max-xl:pt-25 pt-35 pb-10"
+    >
       <div className="min-h-screen grid grid-cols-1 xl:grid-cols-3 max-w-7xl m-auto">
         <div className="flex flex-col items-center">
           <MainCard />

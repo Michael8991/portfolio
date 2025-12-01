@@ -13,9 +13,9 @@ export default function Footer() {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
-    <div className="@container flex items-center justify-center w-full bg-[#fff] min-h-[200px] rounded-t-2xl">
-      <div className="max-w-7xl flex flex-wrap items-stretch justify-center gap-5">
-        <div className="flex flex-col gap-1 text-black/80">
+    <div className="@container flex items-center justify-center w-full bg-white min-h-[200px] rounded-t-2xl py-5 mt-10">
+      <div className="max-w-7xl grid grid-cols-1 xl:grid-cols-4 gap-4  justify-center items-stretch mx-auto">
+        <div className="flex flex-col gap-1 text-black/80 justify-center items-center">
           <p className="text-2xl font-semibold text-center">
             Gracias por visitar mi portfolio
           </p>
