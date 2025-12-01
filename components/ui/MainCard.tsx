@@ -1,13 +1,13 @@
 import Image from "next/image";
 import photoCV from "@/public/michaelPhoto.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationPin, faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
 export default function MainCard() {
   return (
     <div>
-      <div className="bg-white rounded-xl px-4 py-8 flex flex-col items-center w-90">
+      <div className="bg-white rounded-xl px-4 py-8 flex flex-col items-center">
       <div className="relative w-70 h-100 overflow-hidden rounded-xl">
         <Image
           src={photoCV}

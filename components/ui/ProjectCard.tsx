@@ -15,7 +15,7 @@ export default function ProjectCard({
   desc,
   codeUrl,
   theme = "pink",
-  status = "done", // ← NUEVO: valor por defecto
+  status = "done",
 }: {
   image: StaticImageData;
   alt: string;

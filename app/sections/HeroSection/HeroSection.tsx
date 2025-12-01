@@ -198,7 +198,7 @@ export default function HeroSection() {
                 <p className="mt-2 font-bold text-[#fcd8c4] text-sm uppercase">
                   frontend
                 </p>
-                <div className="flex w-full items-center gap-3 font-medium">
+                <div className="flex flex-wrap w-full items-center gap-3 font-medium">
                   <p>NextJS</p>
                   <p>React</p>
                   <p>TypeScript</p>
@@ -209,7 +209,7 @@ export default function HeroSection() {
                   backend
                 </p>
               </div>
-              <div className="flex w-full items-center gap-3 font-medium">
+              <div className="flex flex-wrap w-full items-center gap-3 font-medium">
                 <p>NodeJS</p>
                 <p>Express</p>
                 <p>MongoDB</p>
@@ -220,7 +220,7 @@ export default function HeroSection() {
                   onClick={() => scrollToSection("projects-section")}
                   className="font-medium text-sm hover:cursor-pointer"
                 >
-                  Proyecto
+                  Proyectos
                   <FontAwesomeIcon
                     icon={faSquareArrowUpRight}
                     size="xl"
