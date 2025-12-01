@@ -16,7 +16,7 @@ export default function AboutSection() {
   return (
     <section
       id="about-section"
-      className="@container bg-[#688ea6] min-h-screen"
+      className="@container bg-[#688ea6] min-h-screen items-center justify-center flex"
     >
       <div className="w-full max-w-7xl py-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col px-2 mb-5">

@@ -3,7 +3,7 @@ import {} from "@fortawesome/free-brands-svg-icons";
 import {
   faFolder,
   faHouse,
-  faPenToSquare,
+  // faPenToSquare,
   faUser,
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +12,7 @@ const navItems = [
   { section: "hero-section", label: "Inicio", icon: faHouse },
   { section: "about-section", label: "Sobre mí", icon: faUser },
   { section: "projects-section", label: "Proyectos", icon: faFolder },
-  { section: "contact-section", label: "Contacto", icon: faPenToSquare },
+  // { section: "contact-section", label: "Contacto", icon: faPenToSquare },
 ];
 
 export default function Header() {

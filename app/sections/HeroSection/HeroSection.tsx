@@ -26,52 +26,16 @@ export default function HeroSection() {
       id="hero-section"
       className="@container min-h-screen max-xl:pt-25 pt-35 pb-10"
     >
-      <div className="min-h-screen grid grid-cols-1 xl:grid-cols-3 max-w-7xl m-auto">
+      <div className=" grid grid-cols-1 xl:grid-cols-3 max-w-7xl m-auto">
         <div className="flex flex-col items-center">
           <MainCard />
         </div>
         <div className="mt-4 lg:mt-0 col-span-2">
-          <h1 className="title-tech-font text-3xl max-xl:text-center md:text-5xl lg:text-6xl font-extrabold tracking-wide">
-            FULLSTACK
-          </h1>
-          <div className="max-xl:flex-col max-xl:justify-center flex items-center">
-            <h2 className="title-tech-font text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mt-2 text-white/30">
-              DEVELOPER
-            </h2>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="/CV-ESB11-Michael-Rodriguez.pdf"
-              className="ms-auto max-xl:m-auto max-xl:mt-3 flex items-center hover:scale-105 transition duration-200 ease-in-out"
-            >
-              <div className="flex items-center  bg-white text-black p-3 rounded-2xl">
-                <span>Descargar CV</span>
-                <div className="ms-2 bg-[#F29057] rounded-sm">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 24 L24 8"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M16 8 H24 V16"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </a>
+          <div className="flex flex-wrap items-center">
+            <h1 className="text-3xl max-xl:text-center md:text-5xl lg:text-6xl xl:text-6xl font-extrabold tracking-wide">
+              FULLSTACK <span className="text-white/30">DEVELOPER</span>
+            </h1>
+          
           </div>
           <p className="mt-5 text-white/80 font-light max-xl:text-center max-xl:mx-2">
             Desarrollo aplicaciones claras, modernas y bien estructuradas,

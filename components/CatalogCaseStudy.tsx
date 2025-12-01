@@ -30,9 +30,8 @@ export default function CatalogCaseStudy() {
           bgColor="bg-card-project-pink"
         />
       </div>
-      <div className=""></div>
-      <div className=""></div>
-      <div className=""></div>
+      <div className="h-full"></div>
+    
     </div>
   );
 }
