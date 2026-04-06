@@ -1,0 +1,22 @@
+{
+  "Hero": {
+    "titlePrimary": "FULLSTACK",
+    "titleSecondary": "DEVELOPER",
+    "description": "I build clear, modern and well-structured applications, combining frontend and backend with a practical, results-driven approach.",
+    "connectLine1": "Connect",
+    "connectLine2": "with me",
+    "technologies": {
+      "title": "Technologies",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cta": "Projects"
+    },
+    "background": {
+      "title": "Background",
+      "item1": "Computer Engineering - 2nd Year",
+      "item2": "Web Application Development",
+      "item3": "Full-Stack Projects",
+      "cta": "About me"
+    }
+  }
+}

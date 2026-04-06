@@ -1,28 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { Montserrat, Anton, Orbitron } from "next/font/google";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const anton = Anton({
-  subsets: ["latin"],
-  variable: "--font-anton",
-  weight: ["400"],
-  display: "swap",
-});
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  variable: "--font-orbitron",
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Portfolio — Michael Rodríguez",
@@ -39,9 +17,8 @@ export const metadata: Metadata = {
     "Tailwind",
   ],
   icons: {
-    icon: "/favicon.ico", 
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -50,12 +27,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${montserrat.variable} ${anton.variable} ${orbitron.variable}`}
-    >
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }

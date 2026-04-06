@@ -7,6 +7,8 @@ import {
   faUser,
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 
 const navItems = [
   { section: "hero-section", label: "Inicio", icon: faHouse },
@@ -21,6 +23,15 @@ export default function Header() {
     if (!element) return;
 
     element.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = useLocale();
+
+  const changeLocale = (locale: "es" | "en") => {
+    const cleanPath = pathname.replace(/^\/(es|en)/, "");
+    router.push(`/${locale}${cleanPath}`);
   };
 
   return (
@@ -55,6 +66,26 @@ export default function Header() {
             </span>
           </button>
         ))}
+        <div className="flex items-center gap-1 ml-1 pl-4 border-l border-white/10">
+          {(["es", "en"] as const).map((locale) => (
+            <button
+              key={locale}
+              onClick={() => changeLocale(locale)}
+              className={`
+        relative flex h-9 w-9 items-center justify-center rounded-lg
+        text-xs font-semibold tracking-widest uppercase
+        transition cursor-pointer
+        ${
+          currentLocale === locale
+            ? "bg-red-700 text-white shadow-md shadow-red-900/40"
+            : "text-white/50 hover:text-white hover:bg-white/5"
+        }
+      `}
+            >
+              {locale.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </nav>
     </header>
   );

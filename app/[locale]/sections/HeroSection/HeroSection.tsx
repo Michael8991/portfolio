@@ -11,8 +11,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+
 export default function HeroSection() {
   const [hovered, setHovered] = useState(false);
+  const t = useTranslations("Hero");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -26,22 +29,23 @@ export default function HeroSection() {
       id="hero-section"
       className="@container min-h-screen max-xl:pt-25 pt-35 pb-10"
     >
-      <div className=" grid grid-cols-1 xl:grid-cols-3 max-w-7xl m-auto">
+      <div className="grid grid-cols-1 xl:grid-cols-3 max-w-7xl m-auto">
         <div className="flex flex-col items-center">
           <MainCard />
         </div>
+
         <div className="mt-4 lg:mt-0 col-span-2">
           <div className="flex flex-wrap items-center">
             <h1 className="text-3xl max-xl:text-center md:text-5xl lg:text-6xl xl:text-6xl font-extrabold tracking-wide">
-              FULLSTACK <span className="text-white/30">DEVELOPER</span>
+              {t("titlePrimary")}{" "}
+              <span className="text-white/30">{t("titleSecondary")}</span>
             </h1>
-          
           </div>
+
           <p className="mt-5 text-white/80 font-light max-xl:text-center max-xl:mx-2">
-            Desarrollo aplicaciones claras, modernas y bien estructuradas,
-            combinando frontend y backend con un enfoque práctico y orientado a
-            resultados.
+            {t("description")}
           </p>
+
           <div className="flex items-center justify-start mt-8">
             <div className="flex items-center justify-start relative lg:mx-10 xl:mx-0">
               <motion.div
@@ -49,7 +53,6 @@ export default function HeroSection() {
                 onHoverStart={() => setHovered(true)}
                 onHoverEnd={() => setHovered(false)}
               >
-                {/* LinkedIn */}
                 <motion.a
                   href="https://www.linkedin.com/in/michaelrodrigueziranzo"
                   target="_blank"
@@ -60,6 +63,7 @@ export default function HeroSection() {
                     zIndex: hovered ? 3 : 3,
                   }}
                   transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                  aria-label="LinkedIn"
                 >
                   <div className="py-3.5 px-3 rounded-full bg-blue-400 shadow-lg">
                     <FontAwesomeIcon
@@ -70,7 +74,6 @@ export default function HeroSection() {
                   </div>
                 </motion.a>
 
-                {/* GitHub */}
                 <motion.a
                   href="https://github.com/Michael8991"
                   target="_blank"
@@ -81,6 +84,7 @@ export default function HeroSection() {
                     zIndex: hovered ? 2 : 2,
                   }}
                   transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                  aria-label="GitHub"
                 >
                   <div className="py-3.5 px-3 rounded-full bg-green-700 shadow-lg">
                     <FontAwesomeIcon
@@ -91,7 +95,6 @@ export default function HeroSection() {
                   </div>
                 </motion.a>
 
-                {/* Email */}
                 <motion.a
                   href="mailto:michael2002982@gmail.com"
                   className="absolute"
@@ -100,6 +103,7 @@ export default function HeroSection() {
                     zIndex: hovered ? 1 : 1,
                   }}
                   transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                  aria-label="Email"
                 >
                   <div className="py-3.5 px-3 rounded-full bg-yellow-500 shadow-lg">
                     <FontAwesomeIcon
@@ -110,6 +114,7 @@ export default function HeroSection() {
                   </div>
                 </motion.a>
               </motion.div>
+
               <motion.div
                 animate={{
                   x: hovered ? 35 : 0,
@@ -118,9 +123,10 @@ export default function HeroSection() {
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
                 className="flex flex-col items-start justify-center"
               >
-                <span className="font-medium">Conecta</span>
-                <span className="font-medium">conmigo</span>
+                <span className="font-medium">{t("connectLine1")}</span>
+                <span className="font-medium">{t("connectLine2")}</span>
               </motion.div>
+
               <div className="max-md:absolute max-md:z-0 max-md:left-20">
                 <svg
                   width="214"
@@ -128,7 +134,6 @@ export default function HeroSection() {
                   viewBox="0 0 214 96"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Trazo ondulado discontinuo */}
                   <path
                     d="M15 60
                       C 40 25, 55 25, 70 40
@@ -140,8 +145,6 @@ export default function HeroSection() {
                     strokeLinecap="round"
                     strokeDasharray="8 10"
                   />
-
-                  {/* Flecha al final (sólida) */}
                   <path
                     d="M178 18 L190 25 L182 35"
                     fill="none"
@@ -153,6 +156,7 @@ export default function HeroSection() {
                 </svg>
               </div>
             </div>
+
             <div className="ms-auto">
               <svg
                 width="96"
@@ -160,7 +164,6 @@ export default function HeroSection() {
                 viewBox="0 0 96 96"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {/*<!-- Símbolo > -->*/}
                 <path
                   d="M20 30 L40 48 L20 66"
                   fill="none"
@@ -169,8 +172,6 @@ export default function HeroSection() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-
-                {/* Guion bajo _ */}
                 <line
                   x1="48"
                   y1="66"
@@ -183,8 +184,9 @@ export default function HeroSection() {
               </svg>
             </div>
           </div>
+
           <div className="grid grid-cols-1 mx-4 lg:grid-cols-2 items-center justify-center gap-3 mt-10">
-            <div className=" bg-[#F29057] rounded-xl p-3 mt-5">
+            <div className="bg-[#F29057] rounded-xl p-3 mt-5">
               <p className="text-[#fcd8c4] text-md uppercase font-bold">
                 <FontAwesomeIcon
                   icon={faCubes}
@@ -192,11 +194,12 @@ export default function HeroSection() {
                   className="me-2"
                   style={{ color: "#fcd8c4" }}
                 />
-                Tecnologías
+                {t("technologies.title")}
               </p>
+
               <div className="flex flex-col">
                 <p className="mt-2 font-bold text-[#fcd8c4] text-sm uppercase">
-                  frontend
+                  {t("technologies.frontend")}
                 </p>
                 <div className="flex flex-wrap w-full items-center gap-3 font-medium">
                   <p>NextJS</p>
@@ -205,31 +208,35 @@ export default function HeroSection() {
                   <p>HTML</p>
                   <p>CSS</p>
                 </div>
+
                 <p className="mt-2 font-bold text-[#fcd8c4] text-sm uppercase">
-                  backend
+                  {t("technologies.backend")}
                 </p>
               </div>
+
               <div className="flex flex-wrap w-full items-center gap-3 font-medium">
                 <p>NodeJS</p>
                 <p>Express</p>
                 <p>MongoDB</p>
                 <p>PHP</p>
               </div>
+
               <div className="w-full group flex items-center justify-end">
                 <button
                   onClick={() => scrollToSection("projects-section")}
                   className="font-medium text-sm hover:cursor-pointer"
                 >
-                  Proyectos
+                  {t("technologies.cta")}
                   <FontAwesomeIcon
                     icon={faSquareArrowUpRight}
                     size="xl"
-                    className="group-hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out "
+                    className="group-hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out ms-1"
                   />
                 </button>
               </div>
             </div>
-            <div className=" bg-[#C5DB32] rounded-xl p-3 mt-5">
+
+            <div className="bg-[#C5DB32] rounded-xl p-3 mt-5">
               <p className="text-[#899a1a] text-md uppercase font-bold">
                 <FontAwesomeIcon
                   icon={faLayerGroup}
@@ -237,24 +244,25 @@ export default function HeroSection() {
                   className="me-2"
                   style={{ color: "#899a1a" }}
                 />
-                Background
+                {t("background.title")}
               </p>
+
               <div className="flex flex-col gap-0.5 text-black/60 mt-2">
-                <div className="flex flex-col"></div>
-                <p className="font-medium">Ingeniería Informática 2º Curso</p>
-                <p className="font-medium">Desarrollo de Aplicaciones Web</p>
-                <p className="font-medium">Proyectos Full-Stack</p>
+                <p className="font-medium">{t("background.item1")}</p>
+                <p className="font-medium">{t("background.item2")}</p>
+                <p className="font-medium">{t("background.item3")}</p>
               </div>
-              <div className="w-full flex group items-center justify-end ">
+
+              <div className="w-full flex group items-center justify-end">
                 <button
                   onClick={() => scrollToSection("about-section")}
                   className="font-medium text-sm hover:cursor-pointer"
                 >
-                  Sobre mí
+                  {t("background.cta")}
                   <FontAwesomeIcon
                     icon={faSquareArrowUpRight}
                     size="xl"
-                    className="group-hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out "
+                    className="group-hover:scale-110 hover:cursor-pointer transition duration-300 ease-in-out ms-1"
                   />
                 </button>
               </div>
