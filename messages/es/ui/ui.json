@@ -1,0 +1,10 @@
+{
+  "ui": {
+    "buttons": {
+      "code": "Código",
+      "website": "Web",
+      "demo": "Demo",
+      "caseStudy": "Caso de estudio"
+    }
+  }
+}

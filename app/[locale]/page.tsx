@@ -10,9 +10,13 @@ export default async function Home({
   const { locale } = await params;
 
   return (
-    <div className="bg-body text-main">
+    <div
+      className="
+        bg-white
+      "
+    >
       <Header />
-      <HeroSection />
+      <HeroSection locale={locale} />
       <AboutSection />
       <ProjectsSection locale={locale} />
       <Footer />

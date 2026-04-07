@@ -1,6 +1,6 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { Montserrat, Anton, Orbitron } from "next/font/google";
+import { Montserrat, Anton, Orbitron, Pinyon_Script } from "next/font/google";
 import { getMessages } from "next-intl/server";
 
 import { locales } from "@/i18n/routing";
@@ -9,6 +9,13 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const pinyonScript = Pinyon_Script({
+  subsets: ["latin"],
+  variable: "--font-pinyonScript",
+  weight: ["400"],
   display: "swap",
 });
 
@@ -46,7 +53,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${montserrat.variable} ${anton.variable} ${orbitron.variable}`}
+      className={`${montserrat.variable} ${anton.variable} ${orbitron.variable} ${pinyonScript.variable}`}
     >
       <body>
         <NextIntlClientProvider messages={messages}>

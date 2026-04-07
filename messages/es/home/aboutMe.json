@@ -1,0 +1,60 @@
+{
+  "aboutMe": {
+    "title": "Sobre mí",
+    "intro": {
+      "paragraph1": "Desarrollador Full-Stack con stack TypeScript · Next.js · Node.js · MongoDB. Combino formación técnica en Ingeniería Informática con desarrollo real en producción, actualmente construyendo CostaSpanish Academy, una plataforma SaaS LMS desplegada en Vercel con CI/CD mediante GitHub Actions.",
+      "paragraph2": "Tengo experiencia práctica en arquitectura de aplicaciones web completas: desde el diseño de APIs REST hasta la integración de autenticación, internacionalización y gestión de ficheros en Firebase. Me enfoco en construir productos claros, escalables y bien estructurados, con criterio técnico y orientación a negocio.",
+      "paragraph3": "Busco incorporarme a un equipo donde pueda aportar desde el primer día, seguir creciendo como ingeniero y contribuir al desarrollo de productos reales que aporten valor."
+    },
+    "education": {
+      "title": "Educación",
+      "item1": {
+        "degree": "Desarrollo de Aplicaciones Web",
+        "meta": "2022/2024 - Universidad Alfonso X el Sabio"
+      },
+      "item2": {
+        "degree": "Ingeniería Informática (en curso)",
+        "meta": "Actualidad - Universidad Alfonso X el Sabio"
+      }
+    },
+    "technicalTraining": {
+      "title": "Formación Técnica",
+      "subtitle": "Tecnologías principales y formación complementaria",
+      "items": {
+        "uxui": "Diseño UX/UI",
+        "javascript": "JavaScript",
+        "typescript": "TypeScript",
+        "react": "React",
+        "nodejs": "NodeJS",
+        "nextjs": "NextJS"
+      }
+    },
+    "experience": {
+      "title": "Experiencia Laboral",
+      "subtitle": "Experiencia real en prácticas y proyectos en producción.",
+      "item1": {
+        "role": "Sección9 - Desarrollo Web (Prácticas)",
+        "meta": "Oct 2024 - Ene 2025 · Barcelona, España",
+        "points": [
+          "Desarrollo de soluciones web personalizadas mediante WordPress y optimización de arquitecturas basadas en Laravel.",
+          "Trabajo en entorno ágil con gestión de tickets, priorización de tareas y seguimiento de entregas bajo metodología Scrum.",
+          "Implementación de interfaces desde diseños en Figma, mejorando experiencia de usuario, rendimiento e interactividad."
+        ]
+      },
+      "item2": {
+        "role": "CostaSpanish Academy - SaaS LMS",
+        "meta": "Mayo 2025 - Actualidad · Proyecto en producción",
+        "points": [
+          {
+            "title": "Plataforma SaaS para academia de idiomas.",
+            "description": "Sistema de gestión educativa centralizado con lógica de negocio para alumnos, planes, créditos, clases e historial pedagógico."
+          },
+          {
+            "title": "Stack y despliegue.",
+            "description": "Next.js, TypeScript, MongoDB, Firebase Storage, NextAuth y next-intl. Desplegado en Vercel con CI/CD, testing E2E e integración con servicios externos."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "aboutMe": {
+    "title": "About me",
+    "intro": {
+      "paragraph1": "Full-Stack Developer working with a TypeScript · Next.js · Node.js · MongoDB stack. I combine a Computer Engineering background with real production development, currently building CostaSpanish Academy, an LMS SaaS platform deployed on Vercel with CI/CD through GitHub Actions.",
+      "paragraph2": "I have hands-on experience building complete web applications, from REST API design to authentication, internationalization, and file management with Firebase. I focus on building clear, scalable, and well-structured products with both technical judgment and product mindset.",
+      "paragraph3": "I am looking to join a team where I can contribute from day one, keep growing as an engineer, and help build real products that deliver value."
+    },
+    "education": {
+      "title": "Education",
+      "item1": {
+        "degree": "Web Application Development",
+        "meta": "2022/2024 - Alfonso X el Sabio University"
+      },
+      "item2": {
+        "degree": "Computer Engineering (ongoing)",
+        "meta": "Current - Alfonso X el Sabio University"
+      }
+    },
+    "technicalTraining": {
+      "title": "Technical Background",
+      "subtitle": "Core technologies and complementary training",
+      "items": {
+        "uxui": "UX/UI Design",
+        "javascript": "JavaScript",
+        "typescript": "TypeScript",
+        "react": "React",
+        "nodejs": "NodeJS",
+        "nextjs": "NextJS"
+      }
+    },
+    "experience": {
+      "title": "Work Experience",
+      "subtitle": "Real experience through internship and production projects.",
+      "item1": {
+        "role": "Sección9 - Web Development (Internship)",
+        "meta": "Oct 2024 - Jan 2025 · Barcelona, Spain",
+        "points": [
+          "Developed custom web solutions with WordPress and improved Laravel-based architectures.",
+          "Worked in an agile environment managing tickets, prioritizing tasks, and tracking deliveries under Scrum methodology.",
+          "Implemented interfaces from Figma designs, improving user experience, performance, and interactivity."
+        ]
+      },
+      "item2": {
+        "role": "CostaSpanish Academy - LMS SaaS",
+        "meta": "May 2025 - Present · Production project",
+        "points": [
+          {
+            "title": "SaaS platform for a language academy.",
+            "description": "Centralized educational management system with business logic for students, plans, credits, lessons, and pedagogical history."
+          },
+          {
+            "title": "Stack and deployment.",
+            "description": "Next.js, TypeScript, MongoDB, Firebase Storage, NextAuth, and next-intl. Deployed on Vercel with CI/CD, E2E testing, and external service integrations."
+          }
+        ]
+      }
+    }
+  }
+}

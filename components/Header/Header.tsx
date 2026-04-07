@@ -22,6 +22,9 @@ export default function Header() {
     const element = document.getElementById(id);
     if (!element) return;
 
+    const hash = `#${id}`;
+    window.history.replaceState(null, "", hash);
+
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -31,21 +34,22 @@ export default function Header() {
 
   const changeLocale = (locale: "es" | "en") => {
     const cleanPath = pathname.replace(/^\/(es|en)/, "");
-    router.push(`/${locale}${cleanPath}`);
+    const hash = window.location.hash;
+
+    router.replace(`/${locale}${cleanPath}${hash}`, { scroll: false });
   };
 
   return (
     <header className="w-full flex justify-center py-5 fixed z-10">
-      <nav className="flex items-center gap-5 rounded-2xl bg-body-secondary px-5 py-2 shadow-lg/20 ">
+      <nav className="flex items-center gap-5 rounded-2xl bg-orange-100 px-5 py-2 shadow-lg/20 ">
         {navItems.map((item) => (
           <button
             key={item.section}
             onClick={() => scrollToSection(item.section)}
-            className="group hover:cursor-pointer relative flex h-9 w-9 items-center justify-center rounded-lg text-white/80 hover:text-white hover:bg-white/5 transition"
+            className="group hover:cursor-pointer relative flex h-9 w-9 items-center justify-center rounded-lg text-orange-500 hover:text-orange-700 hover:bg-orange-200 transition"
           >
             <FontAwesomeIcon icon={item.icon} size="lg" />
 
-            {/* Tooltip debajo */}
             <span
               className="
                 pointer-events-none
@@ -66,7 +70,7 @@ export default function Header() {
             </span>
           </button>
         ))}
-        <div className="flex items-center gap-1 ml-1 pl-4 border-l border-white/10">
+        <div className="flex items-center gap-1 ml-1 pl-4 border-l border-orange-600">
           {(["es", "en"] as const).map((locale) => (
             <button
               key={locale}
@@ -77,8 +81,8 @@ export default function Header() {
         transition cursor-pointer
         ${
           currentLocale === locale
-            ? "bg-red-700 text-white shadow-md shadow-red-900/40"
-            : "text-white/50 hover:text-white hover:bg-white/5"
+            ? "bg-orange-700 text-white shadow-md shadow-red-900/40"
+            : "text-black/50 hover:text-black hover:bg-white/5"
         }
       `}
             >

@@ -42,6 +42,10 @@
   .title-tech-font {
     font-family: var(--font-orbitron), system-ui, sans-serif;
   }
+
+  .title-name-font {
+    font-family: var(--font-pinyonScript), system-ui, sans-serif;
+  }
 }
 
 @keyframes pulseShadow {

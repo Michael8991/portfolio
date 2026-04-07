@@ -1,0 +1,38 @@
+{
+  "catalogCaseStudy": {
+    "project1": {
+      "alt": "Costa Spanish Academy project image",
+      "title": "CostaSpanish Academy",
+      "subtitle": "Landing page for showcasing and selling Spanish courses.",
+      "desc": "High-performance landing page built with Next.js, TypeScript, and Tailwind for a Spanish as a foreign language academy. The platform includes advanced SEO, i18n, conversion-focused lead generation forms, and dynamic content retrieved from a MongoDB database. Its modular and scalable architecture is designed to evolve into a full LMS, following best practices in accessibility, performance, and CI/CD deployment on Vercel.",
+      "category": [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "MongoDB",
+        "i18n / Multilingual",
+        "Technical SEO",
+        "Lead Generation",
+        "Scalable Architecture",
+        "CI/CD on Vercel"
+      ]
+    },
+    "project2": {
+      "alt": "SaaS for educational management",
+      "title": "Learning System Managment CostaSpanish",
+      "subtitle": "SaaS for educational management",
+      "desc": "Full-stack SaaS platform built with Next.js and TypeScript, focused on automating educational management. The core of the system is a business logic engine powered by MongoDB, handling pedagogical profiles and a real-time transactional credit system. On the frontend side, it features highly interactive interfaces and multi-step forms with optimized global state management (avoiding prop drilling and cascading renders) through react-hook-form and type-safe validation with Zod.",
+      "category": [
+        "Next.js App Router",
+        "TypeScript",
+        "Firebase Storage",
+        "MongoDB",
+        "React Hook Form",
+        "Zod",
+        "SaaS Architecture",
+        "Complex Forms",
+        "OAuth"
+      ]
+    }
+  }
+}
