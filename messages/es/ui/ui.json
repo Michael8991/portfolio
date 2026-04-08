@@ -4,7 +4,10 @@
       "code": "Código",
       "website": "Web",
       "demo": "Demo",
-      "caseStudy": "Caso de estudio"
+      "caseStudy": "Caso de estudio",
+      "viewProjects": "Ver proyectos",
+      "openToWork": "Disponible para trabajar"
+      
     }
   }
 }

@@ -80,29 +80,49 @@ export default function ProjectCard({
               />
             </a>
 
-            <a
-              target="_blank"
-              className="relative flex items-center justify-center gap-2 bg-white rounded-2xl px-4 py-1 shadow-sm
+            {url ? (
+              <a
+                target="_blank"
+                className="relative flex items-center justify-center gap-2 bg-white rounded-2xl px-4 py-1 shadow-sm
              overflow-hidden
              hover:bg-blue-500 transition-colors duration-200 group"
-              href={url ? url : demo}
-            >
-              <span className="flex items-center gap-2 transition-all duration-200 group-hover:opacity-0 group-hover:scale-75">
-                <p className="text-sm text-gray-700">
-                  {url ? t("buttons.website") : t("buttons.demo")}
-                </p>
-                <Link2 size={16} className="text-gray-700" />
-              </span>
-              <Link2
-                size={18}
-                className="absolute text-white opacity-0 scale-50
+                href={url}
+              >
+                <span className="flex items-center gap-2 transition-all duration-200 group-hover:opacity-0 group-hover:scale-75">
+                  <p className="text-sm text-gray-700">
+                    {t("buttons.website")}
+                  </p>
+                  <Link2 size={16} className="text-gray-700" />
+                </span>
+                <Link2
+                  size={18}
+                  className="absolute text-white opacity-0 scale-50
                group-hover:opacity-100 group-hover:scale-100
                transition-all duration-200 ease-out"
-              />
-            </a>
+                />
+              </a>
+            ) : (
+              <Link
+                target="_blank"
+                className="relative flex items-center justify-center gap-2 bg-white rounded-2xl px-4 py-1 shadow-sm
+             overflow-hidden
+             hover:bg-blue-500 transition-colors duration-200 group"
+                href={`${locale}/projects/${id}/demo`}
+              >
+                <span className="flex items-center gap-2 transition-all duration-200 group-hover:opacity-0 group-hover:scale-75">
+                  <p className="text-sm text-gray-700">{t("buttons.demo")}</p>
+                  <Link2 size={16} className="text-gray-700" />
+                </span>
+                <Link2
+                  size={18}
+                  className="absolute text-white opacity-0 scale-50
+               group-hover:opacity-100 group-hover:scale-100
+               transition-all duration-200 ease-out"
+                />
+              </Link>
+            )}
 
             <Link
-              target="_blank"
               className="relative flex items-center justify-center gap-2 bg-white rounded-2xl px-4 py-1 shadow-sm
              overflow-hidden 
              hover:bg-orange-500 transition-colors duration-200 group"

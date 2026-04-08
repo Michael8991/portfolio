@@ -7,14 +7,19 @@
       "paragraph3": "Busco incorporarme a un equipo donde pueda aportar desde el primer día, seguir creciendo como ingeniero y contribuir al desarrollo de productos reales que aporten valor."
     },
     "education": {
-      "title": "Educación",
+      "title": "Educación y Certificados",
       "item1": {
         "degree": "Desarrollo de Aplicaciones Web",
         "meta": "2022/2024 - Universidad Alfonso X el Sabio"
       },
       "item2": {
-        "degree": "Ingeniería Informática (en curso)",
-        "meta": "Actualidad - Universidad Alfonso X el Sabio"
+        "degree": "Ingeniería Informática",
+        "subtitle":"Fully compatible with full-time work",
+        "meta": "2025/Actualidad - Universidad Alfonso X el Sabio"
+      },
+      "item3": {
+        "degree": "Preliminary English Cambridge",
+        "subtitle":"Actualmente preparandome para el B2 Cambridge (FCE)."
       }
     },
     "technicalTraining": {

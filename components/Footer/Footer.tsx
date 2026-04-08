@@ -13,7 +13,7 @@ export default function Footer() {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
-    <div className="@container flex items-center justify-center w-full bg-white min-h-[200px] rounded-t-2xl py-5 mt-10">
+    <div className="@container flex items-center justify-center w-full bg-white min-h-[200px] rounded-t-4xl py-5 mt-10 shadow-black shadow-2xl">
       <div className="max-w-7xl grid grid-cols-1 xl:grid-cols-4 gap-4  justify-center items-stretch mx-auto">
         <div className="flex flex-col gap-1 text-black/80 justify-center items-center">
           <p className="text-2xl font-semibold text-center">
@@ -62,19 +62,32 @@ export default function Footer() {
             Sígueme
           </p>
           <div className="flex flex-wrap gap-2 justify-center items-center">
-            <a target="_blank" href="https://www.instagram.com/_michael98_/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/_michael98_/"
+            >
               <FontAwesomeIcon icon={faInstagram} size="xl" />
             </a>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/michaelrodrigueziranzo"
             >
               <FontAwesomeIcon icon={faLinkedin} size="xl" />
             </a>
-            <a target="_blank" href="https://github.com/Michael8991">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Michael8991"
+            >
               <FontAwesomeIcon icon={faGithub} size="xl" />
             </a>
-            <a target="_blank" href="https://dribbble.com/Michael9881">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://dribbble.com/Michael9881"
+            >
               <FontAwesomeIcon icon={faDribbble} size="xl" />
             </a>
           </div>

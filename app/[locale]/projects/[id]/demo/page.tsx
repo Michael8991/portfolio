@@ -21,8 +21,8 @@ export default async function CaseStudyPage({
         </div>
 
         <p className="text-gray-500 text-sm max-w-md">
-          Este case study está siendo documentado. Puedes seguir el progreso del
-          código en GitHub mientras tanto.
+          Esta demo está siendo construida. Puedes seguir el progreso del código
+          en GitHub mientras tanto.
         </p>
 
         <a

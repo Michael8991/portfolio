@@ -7,14 +7,19 @@
       "paragraph3": "I am looking to join a team where I can contribute from day one, keep growing as an engineer, and help build real products that deliver value."
     },
     "education": {
-      "title": "Education",
+      "title": "Education y Certificates",
       "item1": {
         "degree": "Web Application Development",
         "meta": "2022/2024 - Alfonso X el Sabio University"
       },
       "item2": {
         "degree": "Computer Engineering (ongoing)",
+        "subtitle":" Modalidad Online completamente compatible con trabajos a jornada completa",
         "meta": "Current - Alfonso X el Sabio University"
+      },
+      "item3": {
+        "degree": "Preliminary English Cambridge",
+        "subtitle":"Currently preparing for the Cambridge B2 (FCE)."
       }
     },
     "technicalTraining": {
