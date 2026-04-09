@@ -37,9 +37,11 @@ export default function HeroSection({ locale }: HeroSectionProps) {
   return (
     <section
       id="hero-section"
-      className="@container min-h-screen max-xl:pt-25 pt-35 pb-10 bg-radial-[at_50%_25%] from-[#f09819] to-[#ff512f] flex flex-col items-center justify-center"
+      // className="@container min-h-screen max-xl:pt-25 pt-35 pb-10 bg-radial-[at_50%_25%] from-[#f09819] to-[#ff512f] flex flex-col items-center justify-center"
+      className="@container relative overflow-hidden min-h-screen max-md:min-h-fit max-xl:pt-25 pt-35 pb-0 bg-radial-[at_50%_25%] from-[#f09819] to-[#ff512f] flex flex-col items-center justify-center"
     >
-      <div className="flex flex-col justify-center items-center max-w-7xl w-full mx-auto px-4">
+      {/* <div className="flex flex-col justify-center items-center max-w-7xl w-full mx-auto px-4"> */}
+      <div className="flex flex-col justify-center items-center max-w-7xl w-full mx-auto px-4 max-sm:px-0">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -268,7 +270,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
             />
           </motion.div>
 
-          <div className="absolute bottom-0 w-full overflow-hidden leading-0">
+          {/* <div className="absolute bottom-0 w-full overflow-hidden leading-0">
             <svg
               viewBox="0 0 500 150"
               preserveAspectRatio="none"
@@ -279,8 +281,33 @@ export default function HeroSection({ locale }: HeroSectionProps) {
                 d="M0,0 C150,100 350,0 500,100 L500,150 L0,150 Z"
               />
             </svg>
+          </div> */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] w-full overflow-hidden leading-none">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="block w-full h-[clamp(24px,6vw,48px)]"
+              aria-hidden="true"
+            >
+              <path
+                fill="#3A6F8F"
+                d="M0,36 C180,78 360,90 540,66 C720,42 900,6 1080,18 C1260,30 1350,66 1440,78 L1440,120 L0,120 Z"
+              />
+            </svg>
           </div>
-
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] w-full overflow-hidden leading-none">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="block w-full h-[clamp(24px,6vw,48px)]"
+              aria-hidden="true"
+            >
+              <path
+                fill="#3A6F8F"
+                d="M0,36 C180,78 360,90 540,66 C720,42 900,6 1080,18 C1260,30 1350,66 1440,78 L1440,120 L0,120 Z"
+              />
+            </svg>
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -315,11 +342,11 @@ export default function HeroSection({ locale }: HeroSectionProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 1.4 }}
-          className="w-full flex flex-wrap items-center justify-center z-10 lg:mt-20 text-white"
+          className="w-full flex items-center justify-center z-10 lg:mt-5 text-white"
         >
           <button
             onClick={() => scrollToSection("projects-section")}
-            className="flex flex-col items-center justify-center py-2 px-4 absolute left-1/2 -translate-x-1/2 cursor-pointer group"
+            className="flex flex-col items-center justify-center py-2 px-4 cursor-pointer w-full"
           >
             <motion.p
               animate={{ y: [0, 5, 0] }}
@@ -327,7 +354,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
               className="flex flex-col items-center justify-center"
             >
               {u("buttons.viewProjects")}
-              <span className="flex items-center justify-center rounded-full">
+              <span className="flex items-center justify-center">
                 <ArrowDown size={18} />
               </span>
             </motion.p>

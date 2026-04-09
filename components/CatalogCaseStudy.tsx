@@ -14,7 +14,7 @@ export default function CatalogCaseStudy({ locale }: CatalogCaseStudyProps) {
   const catCostaSpanishLMS = t.raw("project2.category") as string[];
 
   return (
-    <div className="w-full max-w-7xl grid grid-cols-1 mt-10 items-center justify-center gap-5">
+    <div className="w-full max-w-7xl grid grid-cols-1 mt-10 items-center justify-center gap-5 px-5">
       <div className="h-full">
         <ProjectCard
           image={CostaSpanishMockup}

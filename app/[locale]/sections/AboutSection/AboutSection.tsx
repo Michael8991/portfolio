@@ -110,8 +110,8 @@ function TiltCard({
         transformStyle: "preserve-3d",
         perspective: 800,
       }}
-      whileHover={{ boxShadow: "0 24px 48px rgba(0,0,0,0.22)" }}
-      className="w-full mx-2 rounded-2xl bg-white shadow-lg p-4 mb-2 cursor-pointer"
+      whileHover={{ boxShadow: "0 24px 48px rgba(0,0,0,0.18)" }}
+      className="w-full rounded-2xl bg-white/95 backdrop-blur-sm shadow-md p-3 sm:p-5 mb-3 cursor-pointer border border-white/60"
     >
       {children}
     </motion.div>
@@ -126,15 +126,21 @@ function CardHeader({
   label: string;
 }) {
   return (
-    <div className="flex text-[#ff512f] text-2xl font-semibold gap-2 items-center">
+    <div className="flex items-center gap-2 mb-1">
       <motion.div
         whileHover={{ rotate: [0, -15, 15, -10, 10, 0], scale: 1.15 }}
         transition={{ duration: 0.5 }}
-        className="bg-[#ff512f] rounded-xl p-2"
+        className="bg-[#ff512f] rounded-lg p-1.5 sm:p-2 flex items-center justify-center"
       >
-        <FontAwesomeIcon icon={icon} color="white" />
+        <FontAwesomeIcon
+          icon={icon}
+          color="white"
+          className="text-sm sm:text-base w-4 h-4 sm:w-5 sm:h-5"
+        />
       </motion.div>
-      <span className="font-semibold text-black/90">{label}</span>
+      <span className="font-semibold text-base sm:text-lg text-black/90 tracking-tight">
+        {label}
+      </span>
     </div>
   );
 }
@@ -154,7 +160,7 @@ export default function AboutSection() {
   return (
     <section
       id="about-section"
-      className="@container bg-[#3A6F8F] min-h-screen items-center justify-center flex text-white overflow-hidden"
+      className="@container relative bg-[#3A6F8F] min-h-screen items-center justify-center flex text-white overflow-hidden"
     >
       {/* Floating background orbs */}
       <motion.div
@@ -173,41 +179,55 @@ export default function AboutSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        className="relative w-full max-w-7xl py-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5"
+        className="relative w-full max-w-7xl py-12 px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
       >
         {/* ── Left column ── */}
-        <div className="flex flex-col px-2 mb-5">
+        <div className="flex flex-col">
           <motion.span
             variants={fadeUp}
             custom={0}
-            className="text-3xl lg:text-5xl font-medium w-full"
+            className="text-2xl sm:text-3xl lg:text-5xl font-medium w-full"
           >
             {t("title")}
           </motion.span>
 
-          <motion.p variants={fadeUp} custom={1} className="mt-4 text-md">
+          <motion.p
+            variants={fadeUp}
+            custom={1}
+            className="mt-4 text-sm sm:text-base opacity-90 leading-relaxed"
+          >
             {t("intro.paragraph1")}
           </motion.p>
-          <motion.p variants={fadeUp} custom={2} className="mt-2 text-md">
+          <motion.p
+            variants={fadeUp}
+            custom={2}
+            className="mt-2 text-sm sm:text-base opacity-90 leading-relaxed"
+          >
             {t("intro.paragraph2")}
           </motion.p>
-          <motion.p variants={fadeUp} custom={3} className="mt-2 text-md">
+          <motion.p
+            variants={fadeUp}
+            custom={3}
+            className="mt-2 text-sm sm:text-base opacity-90 leading-relaxed"
+          >
             {t("intro.paragraph3")}
           </motion.p>
 
-          {/* Photo with hover lift + subtle float */}
+          {/* Photo */}
           <motion.div
             variants={fadeUp}
             custom={4}
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             whileHover={{ scale: 1.03, rotate: 1 }}
-            className="relative mx-auto mt-10"
-            style={{ height: "480px", width: "480px" }}
+            className="relative mx-auto mt-8"
+            style={{
+              height: "clamp(220px, 50vw, 420px)",
+              width: "clamp(220px, 50vw, 420px)",
+            }}
           >
-            {/* Accent ring that pulses */}
             <motion.div
-              className="absolute inset-0 rounded-2xl  "
+              className="absolute inset-0 rounded-2xl"
               animate={{ scale: [1, 1.04, 1], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -223,7 +243,7 @@ export default function AboutSection() {
         {/* ── Right column ── */}
         <motion.div
           variants={staggerContainer}
-          className="w-full flex flex-col px-2 items-center"
+          className="w-full flex flex-col"
         >
           {/* Education card */}
           <TiltCard custom={0}>
@@ -233,33 +253,33 @@ export default function AboutSection() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-2 mt-2 text-black/90"
+              className="flex flex-col gap-2 mt-2 divide-y divide-black/5"
             >
               {[
-                <div key="e1" className="flex flex-col text-black/90">
-                  <span className="text-lg font-medium">
+                <div key="e1" className="flex flex-col pt-2 first:pt-0">
+                  <span className="text-sm sm:text-base font-semibold text-black/90">
                     {t("education.item1.degree")}
                   </span>
-                  <p className="text-sm italic font-medium">
+                  <p className="text-xs sm:text-sm text-black/50 italic mt-0.5">
                     {t("education.item1.meta")}
                   </p>
                 </div>,
-                <div key="e2" className="flex flex-col text-black/90">
-                  <span className="text-lg font-medium">
+                <div key="e2" className="flex flex-col pt-2">
+                  <span className="text-sm sm:text-base font-semibold text-black/90">
                     {t("education.item2.degree")}
                   </span>
-                  <span className="text-xs italic">
+                  <span className="text-xs text-black/40 italic">
                     {t("education.item2.subtitle")}
                   </span>
-                  <p className="text-sm italic font-medium">
+                  <p className="text-xs sm:text-sm text-black/50 italic mt-0.5">
                     {t("education.item2.meta")}
                   </p>
                 </div>,
-                <div key="e3" className="flex flex-col text-black/90">
-                  <span className="text-lg font-medium">
+                <div key="e3" className="flex flex-col pt-2">
+                  <span className="text-sm sm:text-base font-semibold text-black/90">
                     {t("education.item3.degree")}
                   </span>
-                  <span className="text-xs italic">
+                  <span className="text-xs text-black/40 italic">
                     {t("education.item3.subtitle")}
                   </span>
                 </div>,
@@ -288,19 +308,24 @@ export default function AboutSection() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 mx-auto text-black/90"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-2 mt-2 text-black/90"
             >
               {technicalItems.map((item, i) => (
                 <motion.div
                   key={i}
                   variants={techItemVariants}
                   custom={i}
-                  whileHover={{ scale: 1.12, color: "#ff512f" }}
+                  whileHover={{ scale: 1.08, color: "#ff512f" }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                  className="flex items-center gap-2 text-black/90 cursor-pointer"
+                  className="flex items-center gap-1.5 text-black/80 cursor-pointer"
                 >
-                  <FontAwesomeIcon icon={item.icon} size="lg" />
-                  <span className="text-lg font-medium">{item.label}</span>
+                  <FontAwesomeIcon
+                    icon={item.icon}
+                    className="w-4 h-4 shrink-0"
+                  />
+                  <span className="text-xs sm:text-sm font-medium truncate">
+                    {item.label}
+                  </span>
                 </motion.div>
               ))}
             </motion.div>
@@ -316,64 +341,57 @@ export default function AboutSection() {
               viewport={{ once: true }}
               className="flex flex-col gap-3 mt-2 text-black/90"
             >
-              {/* Experience item 1 */}
               <motion.div
                 variants={fadeUp}
                 custom={0}
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="flex flex-col text-black/90"
+                className="flex flex-col"
               >
-                <span className="text-lg font-medium">
+                <span className="text-sm sm:text-base font-semibold text-black/90">
                   {t("experience.item1.role")}
                 </span>
-                <p className="text-sm italic font-medium">
+                <p className="text-xs sm:text-sm text-black/50 italic mt-0.5">
                   {t("experience.item1.meta")}
                 </p>
-                <ul className="text-sm mt-1 list-disc list-inside">
-                  <li className="mb-1">{t("experience.item1.points.0")}</li>
-                  <li className="mb-1">{t("experience.item1.points.1")}</li>
-                  <li className="mb-1">{t("experience.item1.points.2")}</li>
+                <ul className="text-xs sm:text-sm mt-1.5 list-disc list-inside space-y-0.5 text-black/70">
+                  <li>{t("experience.item1.points.0")}</li>
+                  <li>{t("experience.item1.points.1")}</li>
+                  <li>{t("experience.item1.points.2")}</li>
                 </ul>
               </motion.div>
 
-              {/* Divider */}
-              <motion.hr
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="border-black/10 origin-left"
-              />
+              <div className="border-t border-black/8" />
 
-              {/* Experience item 2 */}
               <motion.div
                 variants={fadeUp}
                 custom={1}
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="flex flex-col text-black/90"
+                className="flex flex-col"
               >
-                <span className="text-lg font-medium">
+                <span className="text-sm sm:text-base font-semibold text-black/90">
                   {t("experience.item2.role")}
                 </span>
-                <p className="text-sm italic font-medium">
+                <p className="text-xs sm:text-sm text-black/50 italic mt-0.5">
                   {t("experience.item2.meta")}
                 </p>
-                <ul className="text-sm mt-1 list-inside">
-                  <li className="mb-1">
-                    <strong>
+                <ul className="text-xs sm:text-sm mt-1.5 list-inside space-y-1.5 text-black/70">
+                  <li>
+                    <span className="font-semibold text-black/80">
                       {t("experience.item2.points.0.title")}
-                      <br />
-                    </strong>
-                    {t("experience.item2.points.0.description")}
+                    </span>
+                    <span className="block pl-3 mt-0.5">
+                      {t("experience.item2.points.0.description")}
+                    </span>
                   </li>
-                  <li className="mb-1">
-                    <strong>
+                  <li>
+                    <span className="font-semibold text-black/80">
                       {t("experience.item2.points.1.title")}
-                      <br />
-                    </strong>
-                    {t("experience.item2.points.1.description")}
+                    </span>
+                    <span className="block pl-3 mt-0.5">
+                      {t("experience.item2.points.1.description")}
+                    </span>
                   </li>
                 </ul>
               </motion.div>
