@@ -1,0 +1,833 @@
+{
+  "docSections": {
+    "projects": {
+      "default": {
+        "sections": [
+          {
+            "id": "project-overview",
+            "label": "Project Overview",
+            "kind": "projectOverview",
+            "items": [
+              {
+                "id": "project-overview-what",
+                "label": "What it is",
+                "content": "Generic content for What it is inside Project Overview."
+              },
+              {
+                "id": "project-overview-goal",
+                "label": "Business goal",
+                "content": "Generic content for Business goal inside Project Overview."
+              },
+              {
+                "id": "project-overview-audience",
+                "label": "Target audience",
+                "content": "Generic content for Target audience inside Project Overview."
+              },
+              {
+                "id": "project-overview-stack",
+                "label": "Tech stack",
+                "content": "Generic content for Tech stack inside Project Overview."
+              },
+              {
+                "id": "project-overview-status",
+                "label": "Status",
+                "content": "Generic content for Status inside Project Overview."
+              }
+            ],
+            "content": "Generic content for the Project Overview section."
+          },
+          {
+            "id": "product-vision",
+            "label": "Product Vision",
+            "kind": "productVision",
+            "items": [
+              {
+                "id": "product-vision-proposition",
+                "label": "Value proposition",
+                "content": "Generic content for Value proposition inside Product Vision."
+              },
+              {
+                "id": "product-vision-conversion",
+                "label": "Conversion strategy",
+                "content": "Generic content for Conversion strategy inside Product Vision."
+              },
+              {
+                "id": "product-vision-journey",
+                "label": "User journey",
+                "content": "Generic content for User journey inside Product Vision."
+              }
+            ],
+            "content": "Generic content for the Product Vision section."
+          },
+          {
+            "id": "core-modules",
+            "label": "Core Modules",
+            "kind": "coreModules",
+            "items": [
+              {
+                "id": "core-modules-hero",
+                "label": "Hero and messaging",
+                "content": "Generic content for Hero and messaging inside Core Modules."
+              },
+              {
+                "id": "core-modules-catalog",
+                "label": "Course catalog",
+                "content": "Generic content for Course catalog inside Core Modules."
+              },
+              {
+                "id": "core-modules-forms",
+                "label": "Lead forms",
+                "content": "Generic content for Lead forms inside Core Modules."
+              },
+              {
+                "id": "core-modules-proof",
+                "label": "Social proof",
+                "content": "Generic content for Social proof inside Core Modules."
+              },
+              {
+                "id": "core-modules-seo",
+                "label": "SEO content",
+                "content": "Generic content for SEO content inside Core Modules."
+              }
+            ],
+            "content": "Generic content for the Core Modules section."
+          },
+          {
+            "id": "system-architecture",
+            "label": "System Architecture",
+            "kind": "systemArchitecture",
+            "items": [
+              {
+                "id": "system-architecture-frontend",
+                "label": "Frontend app",
+                "content": "Generic content for Frontend app inside System Architecture."
+              },
+              {
+                "id": "system-architecture-content",
+                "label": "Content and data",
+                "content": "Generic content for Content and data inside System Architecture."
+              },
+              {
+                "id": "system-architecture-tracking",
+                "label": "Analytics and tracking",
+                "content": "Generic content for Analytics and tracking inside System Architecture."
+              },
+              {
+                "id": "system-architecture-deploy",
+                "label": "Deployment",
+                "content": "Generic content for Deployment inside System Architecture."
+              }
+            ],
+            "content": "Generic content for the System Architecture section."
+          },
+          {
+            "id": "domain-modeling",
+            "label": "Domain Modeling",
+            "kind": "domainModeling",
+            "items": [
+              {
+                "id": "domain-modeling-course",
+                "label": "Course entity",
+                "content": "Generic content for Course entity inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-lead",
+                "label": "Lead entity",
+                "content": "Generic content for Lead entity inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-locale",
+                "label": "Localization model",
+                "content": "Generic content for Localization model inside Domain Modeling."
+              }
+            ],
+            "content": "Generic content for the Domain Modeling section."
+          },
+          {
+            "id": "key-user-flows",
+            "label": "Key User Flows",
+            "kind": "keyUserFlows",
+            "items": [
+              {
+                "id": "key-user-flows-visit",
+                "label": "Landing visit",
+                "content": "Generic content for Landing visit inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-submit",
+                "label": "Form submission",
+                "content": "Generic content for Form submission inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-followup",
+                "label": "Follow-up",
+                "content": "Generic content for Follow-up inside Key User Flows."
+              }
+            ],
+            "content": "Generic content for the Key User Flows section."
+          },
+          {
+            "id": "engineering-decisions",
+            "label": "Engineering Decisions",
+            "kind": "engineeringDecisions",
+            "items": [
+              {
+                "id": "engineering-decisions-rendering",
+                "label": "Rendering strategy",
+                "content": "Generic content for Rendering strategy inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-forms",
+                "label": "Forms and validation",
+                "content": "Generic content for Forms and validation inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-performance",
+                "label": "Performance",
+                "content": "Generic content for Performance inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-i18n",
+                "label": "i18n",
+                "content": "Generic content for i18n inside Engineering Decisions."
+              }
+            ],
+            "content": "Generic content for the Engineering Decisions section."
+          },
+          {
+            "id": "project-structure",
+            "label": "Project Structure",
+            "kind": "projectStructure",
+            "items": [
+              {
+                "id": "project-structure-app",
+                "label": "app/ routes",
+                "content": "Generic content for app/ routes inside Project Structure."
+              },
+              {
+                "id": "project-structure-components",
+                "label": "components/",
+                "content": "Generic content for components/ inside Project Structure."
+              },
+              {
+                "id": "project-structure-lib",
+                "label": "lib/ and utils",
+                "content": "Generic content for lib/ and utils inside Project Structure."
+              }
+            ],
+            "content": "Generic content for the Project Structure section."
+          },
+          {
+            "id": "current-status-roadmap",
+            "label": "Current Status and Roadmap",
+            "kind": "currentStatusRoadmap",
+            "items": [
+              {
+                "id": "current-status-implemented",
+                "label": "Implemented",
+                "content": "Generic content for Implemented inside Current Status and Roadmap."
+              },
+              {
+                "id": "current-status-progress",
+                "label": "In progress",
+                "content": "Generic content for In progress inside Current Status and Roadmap."
+              },
+              {
+                "id": "current-status-next",
+                "label": "Next phase",
+                "content": "Generic content for Next phase inside Current Status and Roadmap."
+              }
+            ],
+            "content": "Generic content for the Current Status and Roadmap section."
+          },
+          {
+            "id": "lessons-learned",
+            "label": "Lessons Learned",
+            "kind": "lessonsLearned",
+            "items": [
+              {
+                "id": "lessons-learned-insights",
+                "label": "Conversion insights",
+                "content": "Generic content for Conversion insights inside Lessons Learned."
+              },
+              {
+                "id": "lessons-learned-technical",
+                "label": "Technical learnings",
+                "content": "Generic content for Technical learnings inside Lessons Learned."
+              },
+              {
+                "id": "lessons-learned-improvements",
+                "label": "Future improvements",
+                "content": "Generic content for Future improvements inside Lessons Learned."
+              }
+            ],
+            "content": "Generic content for the Lessons Learned section."
+          }
+        ]
+      },
+      "project1": {
+        "sections": [
+          {
+            "id": "project-overview",
+            "label": "Project Overview",
+            "kind": "projectOverview",
+            "items": [
+              {
+                "id": "project-overview-what",
+                "label": "What it is",
+                "content": "Generic content for What it is inside Project Overview."
+              },
+              {
+                "id": "project-overview-goal",
+                "label": "Business goal",
+                "content": "Generic content for Business goal inside Project Overview."
+              },
+              {
+                "id": "project-overview-audience",
+                "label": "Target audience",
+                "content": "Generic content for Target audience inside Project Overview."
+              },
+              {
+                "id": "project-overview-stack",
+                "label": "Tech stack",
+                "content": "Generic content for Tech stack inside Project Overview."
+              },
+              {
+                "id": "project-overview-status",
+                "label": "Status",
+                "content": "Generic content for Status inside Project Overview."
+              }
+            ],
+            "content": "Generic content for the Project Overview section."
+          },
+          {
+            "id": "product-vision",
+            "label": "Product Vision",
+            "kind": "productVision",
+            "items": [
+              {
+                "id": "product-vision-proposition",
+                "label": "Value proposition",
+                "content": "Generic content for Value proposition inside Product Vision."
+              },
+              {
+                "id": "product-vision-conversion",
+                "label": "Conversion strategy",
+                "content": "Generic content for Conversion strategy inside Product Vision."
+              },
+              {
+                "id": "product-vision-journey",
+                "label": "User journey",
+                "content": "Generic content for User journey inside Product Vision."
+              }
+            ],
+            "content": "Generic content for the Product Vision section."
+          },
+          {
+            "id": "core-modules",
+            "label": "Core Modules",
+            "kind": "coreModules",
+            "items": [
+              {
+                "id": "core-modules-hero",
+                "label": "Hero and messaging",
+                "content": "Generic content for Hero and messaging inside Core Modules."
+              },
+              {
+                "id": "core-modules-catalog",
+                "label": "Course catalog",
+                "content": "Generic content for Course catalog inside Core Modules."
+              },
+              {
+                "id": "core-modules-forms",
+                "label": "Lead forms",
+                "content": "Generic content for Lead forms inside Core Modules."
+              },
+              {
+                "id": "core-modules-proof",
+                "label": "Social proof",
+                "content": "Generic content for Social proof inside Core Modules."
+              },
+              {
+                "id": "core-modules-seo",
+                "label": "SEO content",
+                "content": "Generic content for SEO content inside Core Modules."
+              }
+            ],
+            "content": "Generic content for the Core Modules section."
+          },
+          {
+            "id": "system-architecture",
+            "label": "System Architecture",
+            "kind": "systemArchitecture",
+            "items": [
+              {
+                "id": "system-architecture-frontend",
+                "label": "Frontend app",
+                "content": "Generic content for Frontend app inside System Architecture."
+              },
+              {
+                "id": "system-architecture-content",
+                "label": "Content and data",
+                "content": "Generic content for Content and data inside System Architecture."
+              },
+              {
+                "id": "system-architecture-tracking",
+                "label": "Analytics and tracking",
+                "content": "Generic content for Analytics and tracking inside System Architecture."
+              },
+              {
+                "id": "system-architecture-deploy",
+                "label": "Deployment",
+                "content": "Generic content for Deployment inside System Architecture."
+              }
+            ],
+            "content": "Generic content for the System Architecture section."
+          },
+          {
+            "id": "domain-modeling",
+            "label": "Domain Modeling",
+            "kind": "domainModeling",
+            "items": [
+              {
+                "id": "domain-modeling-course",
+                "label": "Course entity",
+                "content": "Generic content for Course entity inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-lead",
+                "label": "Lead entity",
+                "content": "Generic content for Lead entity inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-locale",
+                "label": "Localization model",
+                "content": "Generic content for Localization model inside Domain Modeling."
+              }
+            ],
+            "content": "Generic content for the Domain Modeling section."
+          },
+          {
+            "id": "key-user-flows",
+            "label": "Key User Flows",
+            "kind": "keyUserFlows",
+            "items": [
+              {
+                "id": "key-user-flows-visit",
+                "label": "Landing visit",
+                "content": "Generic content for Landing visit inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-submit",
+                "label": "Form submission",
+                "content": "Generic content for Form submission inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-followup",
+                "label": "Follow-up",
+                "content": "Generic content for Follow-up inside Key User Flows."
+              }
+            ],
+            "content": "Generic content for the Key User Flows section."
+          },
+          {
+            "id": "engineering-decisions",
+            "label": "Engineering Decisions",
+            "kind": "engineeringDecisions",
+            "items": [
+              {
+                "id": "engineering-decisions-rendering",
+                "label": "Rendering strategy",
+                "content": "Generic content for Rendering strategy inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-forms",
+                "label": "Forms and validation",
+                "content": "Generic content for Forms and validation inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-performance",
+                "label": "Performance",
+                "content": "Generic content for Performance inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-i18n",
+                "label": "i18n",
+                "content": "Generic content for i18n inside Engineering Decisions."
+              }
+            ],
+            "content": "Generic content for the Engineering Decisions section."
+          },
+          {
+            "id": "project-structure",
+            "label": "Project Structure",
+            "kind": "projectStructure",
+            "items": [
+              {
+                "id": "project-structure-app",
+                "label": "app/ routes",
+                "content": "Generic content for app/ routes inside Project Structure."
+              },
+              {
+                "id": "project-structure-components",
+                "label": "components/",
+                "content": "Generic content for components/ inside Project Structure."
+              },
+              {
+                "id": "project-structure-lib",
+                "label": "lib/ and utils",
+                "content": "Generic content for lib/ and utils inside Project Structure."
+              }
+            ],
+            "content": "Generic content for the Project Structure section."
+          },
+          {
+            "id": "current-status-roadmap",
+            "label": "Current Status and Roadmap",
+            "kind": "currentStatusRoadmap",
+            "items": [
+              {
+                "id": "current-status-implemented",
+                "label": "Implemented",
+                "content": "Generic content for Implemented inside Current Status and Roadmap."
+              },
+              {
+                "id": "current-status-progress",
+                "label": "In progress",
+                "content": "Generic content for In progress inside Current Status and Roadmap."
+              },
+              {
+                "id": "current-status-next",
+                "label": "Next phase",
+                "content": "Generic content for Next phase inside Current Status and Roadmap."
+              }
+            ],
+            "content": "Generic content for the Current Status and Roadmap section."
+          },
+          {
+            "id": "lessons-learned",
+            "label": "Lessons Learned",
+            "kind": "lessonsLearned",
+            "items": [
+              {
+                "id": "lessons-learned-insights",
+                "label": "Conversion insights",
+                "content": "Generic content for Conversion insights inside Lessons Learned."
+              },
+              {
+                "id": "lessons-learned-technical",
+                "label": "Technical learnings",
+                "content": "Generic content for Technical learnings inside Lessons Learned."
+              },
+              {
+                "id": "lessons-learned-improvements",
+                "label": "Future improvements",
+                "content": "Generic content for Future improvements inside Lessons Learned."
+              }
+            ],
+            "content": "Generic content for the Lessons Learned section."
+          }
+        ]
+      },
+      "project2": {
+        "sections": [
+          {
+            "id": "project-overview",
+            "label": "Project Overview",
+            "kind": "projectOverview",
+            "items": [
+              {
+                "id": "project-overview-what",
+                "label": "What it is",
+                "content": "CostaSpanish LMS is a web platform currently in development, focused on the academic and operational management of a language academy. The project is not limited to hosting educational content: it is designed to solve real business rules such as managing courses, students, resources, credits, pricing, and operational policies, on top of a modular architecture prepared to evolve into a complete LMS with a SaaS-oriented approach."
+              },
+              {
+                "id": "project-overview-audience",
+                "label": "Target audience",
+                "content": "The system is designed for CostaSpanish, an online Spanish academy, using the use case of independent teachers who need to centralize their operations in a single platform as reference.\n\nIt has two main dimensions:\n\nFor the teacher or administrator:\na management environment to organize students, resources, courses, credits, and internal workflows with clear rules and strong validation.\n\nFor the student:\na clearer and more structured experience to access the training offer, understand usage conditions, and, in later phases, interact with their private area inside the system."
+              },
+              {
+                "id": "project-overview-stack",
+                "label": "Tech stack",
+                "content": "Main framework: Next.js (App Router) as a full-stack environment\nLanguage: TypeScript\nDatabase: MongoDB\nData modeling: Mongoose\nValidation: Zod\nFrontend: React + modular component architecture"
+              },
+              {
+                "id": "project-overview-status",
+                "label": "Status",
+                "content": "In development.\nThe project already has a solid functional base in areas such as authentication, student management, credits or vouchers, resource library, and initial integration with external services. From a technical perspective, the domain foundations are already consolidated through modular models, multi-layer validation, and structures prepared to keep scaling toward modules such as courses, lessons, and a full LMS experience."
+              },
+              {
+                "id": "project-overview-role",
+                "label": "Role",
+                "content": "Full-Stack Developer & Software Architect\n\nI have been responsible for designing and implementing the system architecture, defining domain structure, layer separation, data modeling, business rule validation, and the evolution of a technical base prepared to grow without compromising maintainability or consistency."
+              }
+            ],
+            "content": "Overview of CostaSpanish LMS: product definition, target users, stack, project status, and technical role."
+          },
+          {
+            "id": "product-vision",
+            "label": "Product Vision",
+            "kind": "productVision",
+            "items": [
+              {
+                "id": "product-vision-problem",
+                "label": "Real problem",
+                "content": "In many academies and small education businesses, daily management still depends on manual processes and disconnected tools. Information about students, classes, materials, payments, vouchers, incidents, follow-up, and availability is often spread across Excel, WhatsApp, email, Google Calendar, and internal documents. This fragmentation creates operational friction, time loss, duplicated data, and a high probability of errors in critical tasks.\n\nThe problem is not only administrative. It also directly affects service quality and the ability to scale the business. When operations depend on manual processes, it becomes harder to keep control of credits, track each student's real progress, reuse materials in an orderly way, or maintain clear logic between courses, resources, and delivered sessions.\n\nIn addition, from a pedagogical perspective, many existing tools cover only isolated parts of teaching work. A teacher may have materials in one place, student information in another, the calendar somewhere else, and class notes or course planning in a different location. The result is that lesson preparation, which should be the center of the teaching process, ends up scattered, unstructured, and without continuity between sessions.\n\nCostaSpanish LMS is built specifically to solve that scenario. The application aims to centralize operations into a single platform and translate real business rules and pedagogical needs into a maintainable technical structure. The goal is not just to store data, but to connect the right pieces: who the student is, what goals they have, what course they follow, which materials fit their level, and how all of that becomes a prepared, reusable, and coherent lesson.\n\nThat is why the lesson module has a particularly important role within the product. Lesson creation is not approached as a secondary feature, but as the mechanism that brings the full system value into the teacher's day-to-day work. This is where resources stop being loose files, student profiles stop being static records, and courses stop being abstract definitions, becoming concrete classes with pedagogical intent, context, and follow-up."
+              },
+              {
+                "id": "product-vision-users",
+                "label": "Users",
+                "content": "The system is designed around several profiles with clearly differentiated needs, although in the current phase the main focus is on teachers and the academy's internal operations.\n\nTeacher or administrator\nThis is the main system user in the current phase. They need a reliable tool to manage students, check and update vouchers or credits, organize teaching resources, maintain a clear course structure, and rely on integrations such as Google Calendar to reduce manual tasks.\n\nHowever, their core need is not only administrative. Teachers also need a more solid and professional way to prepare classes. This is where the system's differential value appears: the ability to build lessons by connecting student context, available resources, pedagogical goals, and course structure. For this profile, the platform does not only save time; it also provides order, continuity, and reuse capacity.\n\nIn other words, teachers need two things at the same time: operational control on one side, and pedagogical preparation capability on the other. CostaSpanish LMS is designed to address both.\n\nStudent\nAlthough the student experience is still evolving, the system is designed to support a richer future interaction layer. The platform lays the foundation for students to engage with their training activity in a more structured way: access to resources, visibility into classes or credits, an organized experience, and a future private area.\n\nFrom a product perspective, the student should not be only an administrative record, but a profile with context, progress, and specific needs. This approach is especially important for the future lesson module, since useful class preparation depends on linking content to the student's level, history, goals, and specific situation.\n\nAcademy or education business\nBeyond the individual user, the product addresses a broader organizational need: having its own digital base to manage a language academy without depending on improvised processes or multiple separate tools.\n\nFor this organizational profile, the system value lies in standardization: clearer rules, more consistent information, less dependence on memory or improvisation, and an operational base prepared to grow. In this context, future lesson management also provides strategic value because it allows teaching preparation to be systematized and tacit knowledge to be converted into repeatable and scalable processes."
+              },
+              {
+                "id": "product-vision-objectives",
+                "label": "System objectives",
+                "content": "1. Centralize operations into a single platform\nOne of the project's main goals is to replace fragmented operations with a unified flow. The application is designed to bring academic management, basic business administration, and resource organization into the same environment, avoiding dependence on different tools for each task.\n\nThis means integrating in one platform elements that are usually disconnected: students, credits, materials, authentication, calendar integration, course structure, and class preparation. Centralization is not just about keeping everything together, but about allowing system data to be connected in a useful way.\n\n2. Reduce errors through business rules and strong validation\nThe system aims to minimize data and process inconsistencies through an architecture based on multi-layer validation, well-defined domain models, and explicit state control. The objective is not only to store information, but to ensure that the system operates on coherent structures that remain sustainable over time.\n\nThis is especially important in areas such as:\n- credit or voucher management\n- student profiles\n- resource organization\n- relationships between courses and their future instances\n- consistency of data used to build lessons\n\nThe idea is that each module relies on a solid base and that user decisions are validated with clear rules before propagating through the system.\n\n3. Build a scalable foundation for a real LMS\nAlthough part of the system is already implemented, the project is designed from day one to grow. The model, validator, DTO, component, and route structure is designed to allow gradual incorporation of new modules without rebuilding the technical foundation.\n\nAmong those modules, the evolution of courses, lessons, and student experience is a core part of the roadmap. The intention is not to add isolated features, but to build a coherent educational platform where operational management and pedagogical experience belong to the same ecosystem.\n\n4. Improve real teaching efficiency\nAnother key objective is to free teachers from repetitive, low-value tasks. The platform aims for teacher energy to focus on teaching, follow-up, and learning personalization, while the system absorbs the mechanical side of daily operations: material organization, access to relevant data, credit control, structured access to information, and integration with external tools.\n\nThis objective directly connects with the lesson module value. Preparing a class well often requires reviewing student profile, remembering course progress, finding suitable materials, and deciding what to work on in the session. If all of that is scattered, preparation time goes up and consistency goes down. If all of that is connected in the system, the lesson becomes an informed and reusable construct.\n\n5. Turn lesson creation into the system core\nThis is one of the most important strategic objectives of the product. The platform is designed so the lesson becomes the central teaching work unit, not as a simple calendar entry or quick note, but as a structure that combines:\n- student information\n- individual context and progress\n- pedagogical resources\n- learning objectives\n- relation to a course or training pathway\n- traceability between sessions\n\nIn product terms, this means the system is not only for running an academy, but for actively supporting pedagogical work. In technical terms, it means designing a domain capable of relating entities and flows that in many applications remain isolated.\n\nThis is probably the most ambitious and differentiating part of the project: turning class preparation into a structured, reusable process connected with the platform ecosystem. That capability is what can transform CostaSpanish LMS from a management tool into a true educational solution."
+              }
+            ],
+            "content": "CostaSpanish LMS is a web platform in development aimed at digitizing and centralizing the academic, administrative, and pedagogical operations of a language academy. The system is designed to unify, in one environment, processes that are usually split across spreadsheets, messaging apps, calendars, scattered documents, and disconnected tools: student management, credit or voucher control, pedagogical resource library, role-based authentication, external integrations, and progressively, structured course management and learning experiences.\n\nThe product vision is not limited to building an admin panel. The goal is to establish the foundation of a specialized SaaS-type solution for teachers and small academies, capable of reducing operational friction, improving process consistency, and scaling toward a complete LMS.\n\nWithin that vision, one of the key pieces of the system is the lesson creation and preparation module, conceived as the pedagogical core of the platform. This functionality is intended to let teachers build each class by structurally connecting teaching resources, student profile, progress or individual context, and the course profile or pedagogical framework to which the session belongs. Instead of treating each class as an isolated note or improvised preparation, the platform aims to turn the lesson into a reusable, traceable work unit connected to the rest of the system.\n\nThat idea turns the lesson into the product's centerpiece: the point where academic organization, learning personalization, material reuse, and real teaching efficiency converge."
+          },
+          {
+            "id": "core-modules",
+            "label": "Core Modules",
+            "kind": "coreModules",
+            "items": [
+              {
+                "id": "core-modules-auth",
+                "label": "Authentication and roles",
+                "content": "Generic content for Authentication and roles inside Core Modules."
+              },
+              {
+                "id": "core-modules-dashboard",
+                "label": "Dashboard",
+                "content": "Generic content for Dashboard inside Core Modules."
+              },
+              {
+                "id": "core-modules-students",
+                "label": "Student management",
+                "content": "Generic content for Student management inside Core Modules."
+              },
+              {
+                "id": "core-modules-resources",
+                "label": "Resource library",
+                "content": "Generic content for Resource library inside Core Modules."
+              },
+              {
+                "id": "core-modules-courses",
+                "label": "Course domain",
+                "content": "Generic content for Course domain inside Core Modules."
+              },
+              {
+                "id": "core-modules-integrations",
+                "label": "Integrations",
+                "content": "Generic content for Integrations inside Core Modules."
+              },
+              {
+                "id": "core-modules-infrastructure",
+                "label": "Infrastructure",
+                "content": "Generic content for Infrastructure inside Core Modules."
+              }
+            ],
+            "content": "Generic content for the Core Modules section."
+          },
+          {
+            "id": "system-architecture",
+            "label": "System Architecture",
+            "kind": "systemArchitecture",
+            "items": [
+              {
+                "id": "system-architecture-frontend",
+                "label": "Frontend",
+                "content": "Generic content for Frontend inside System Architecture."
+              },
+              {
+                "id": "system-architecture-api",
+                "label": "API layer",
+                "content": "Generic content for API layer inside System Architecture."
+              },
+              {
+                "id": "system-architecture-domain",
+                "label": "Domain core",
+                "content": "Generic content for Domain core inside System Architecture."
+              },
+              {
+                "id": "system-architecture-infra",
+                "label": "Infrastructure",
+                "content": "Generic content for Infrastructure inside System Architecture."
+              }
+            ],
+            "content": "Generic content for the System Architecture section."
+          },
+          {
+            "id": "domain-modeling",
+            "label": "Domain Modeling",
+            "kind": "domainModeling",
+            "items": [
+              {
+                "id": "domain-modeling-entities",
+                "label": "Entities",
+                "content": "Generic content for Entities inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-rules",
+                "label": "Business rules",
+                "content": "Generic content for Business rules inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-relationships",
+                "label": "Relationships",
+                "content": "Generic content for Relationships inside Domain Modeling."
+              },
+              {
+                "id": "domain-modeling-consistency",
+                "label": "Consistency",
+                "content": "Generic content for Consistency inside Domain Modeling."
+              }
+            ],
+            "content": "Generic content for the Domain Modeling section."
+          },
+          {
+            "id": "key-user-flows",
+            "label": "Key User Flows",
+            "kind": "keyUserFlows",
+            "items": [
+              {
+                "id": "key-user-flows-login",
+                "label": "Login",
+                "content": "Generic content for Login inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-students",
+                "label": "Students",
+                "content": "Generic content for Students inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-resources",
+                "label": "Resources",
+                "content": "Generic content for Resources inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-credits",
+                "label": "Credits",
+                "content": "Generic content for Credits inside Key User Flows."
+              },
+              {
+                "id": "key-user-flows-integrations",
+                "label": "Integrations",
+                "content": "Generic content for Integrations inside Key User Flows."
+              }
+            ],
+            "content": "Generic content for the Key User Flows section."
+          },
+          {
+            "id": "engineering-decisions",
+            "label": "Engineering Decisions",
+            "kind": "engineeringDecisions",
+            "items": [
+              {
+                "id": "engineering-decisions-validation",
+                "label": "Validation",
+                "content": "Generic content for Validation inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-dtos",
+                "label": "DTOs",
+                "content": "Generic content for DTOs inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-modularity",
+                "label": "Modularity",
+                "content": "Generic content for Modularity inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-scalability",
+                "label": "Scalability",
+                "content": "Generic content for Scalability inside Engineering Decisions."
+              },
+              {
+                "id": "engineering-decisions-i18n",
+                "label": "i18n",
+                "content": "Generic content for i18n inside Engineering Decisions."
+              }
+            ],
+            "content": "Generic content for the Engineering Decisions section."
+          },
+          {
+            "id": "project-structure",
+            "label": "Project Structure",
+            "kind": "projectStructure",
+            "items": [
+              {
+                "id": "project-structure-app",
+                "label": "app/ directory",
+                "content": "Generic content for app/ directory inside Project Structure."
+              },
+              {
+                "id": "project-structure-components",
+                "label": "components/",
+                "content": "Generic content for components/ inside Project Structure."
+              },
+              {
+                "id": "project-structure-lib",
+                "label": "lib/",
+                "content": "Generic content for lib/ inside Project Structure."
+              },
+              {
+                "id": "project-structure-config",
+                "label": "Config and tooling",
+                "content": "Generic content for Config and tooling inside Project Structure."
+              }
+            ],
+            "content": "Generic content for the Project Structure section."
+          },
+          {
+            "id": "current-status-roadmap",
+            "label": "Current Status and Roadmap",
+            "kind": "currentStatusRoadmap",
+            "items": [
+              {
+                "id": "current-status-implemented",
+                "label": "Implemented",
+                "content": "Generic content for Implemented inside Current Status and Roadmap."
+              },
+              {
+                "id": "current-status-progress",
+                "label": "In progress",
+                "content": "Generic content for In progress inside Current Status and Roadmap."
+              },
+              {
+                "id": "current-status-next",
+                "label": "Next phase",
+                "content": "Generic content for Next phase inside Current Status and Roadmap."
+              }
+            ],
+            "content": "Generic content for the Current Status and Roadmap section."
+          },
+          {
+            "id": "lessons-learned",
+            "label": "Lessons Learned",
+            "kind": "lessonsLearned",
+            "items": [
+              {
+                "id": "lessons-learned-challenges",
+                "label": "Challenges",
+                "content": "Generic content for Challenges inside Lessons Learned."
+              },
+              {
+                "id": "lessons-learned-improvements",
+                "label": "Improvements",
+                "content": "Generic content for Improvements inside Lessons Learned."
+              },
+              {
+                "id": "lessons-learned-learnings",
+                "label": "Key learnings",
+                "content": "Generic content for Key learnings inside Lessons Learned."
+              }
+            ],
+            "content": "Generic content for the Lessons Learned section."
+          }
+        ]
+      }
+    }
+  }
+}

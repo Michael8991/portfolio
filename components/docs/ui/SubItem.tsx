@@ -33,30 +33,14 @@ export function SubItem({ sub, index, isActive, onNavigate }: SubItemProps) {
       initial="hidden"
       animate="visible"
       style={{ listStyle: "none" }}
+      className="pe-4"
     >
       <motion.button
         whileHover={{ x: 2 }}
         whileTap={{ scale: 0.98 }}
         transition={{ duration: 0.12 }}
         onClick={() => onNavigate(sub.href, sub.id)}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          width: "100%",
-          padding: "6px 8px 6px 0",
-          border: "none",
-          background: "transparent",
-          cursor: "pointer",
-          fontFamily: "inherit",
-          fontSize: 13,
-          fontWeight: isActive ? 500 : 400,
-          color: isActive
-            ? "var(--sidebar-accent)"
-            : "var(--sidebar-text-secondary)",
-          textAlign: "left",
-          transition: "color 0.15s",
-        }}
+        className={`flex items-center justify-start text-left gap-4 w-full px-2 py-1 cursor-pointer text-sm ${isActive ? "bg-orange-500 text-white font-medium" : ""} rounded-lg transition-all duration-150 ease-in-out`}
       >
         {isActive && <ActiveDot />}
         {!isActive && <span style={{ width: 5, height: 5, flexShrink: 0 }} />}

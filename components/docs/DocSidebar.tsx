@@ -1,6 +1,7 @@
 "use client";
 
 import { DocSection } from "@/lib/types/DocSidebarTypes";
+import { useMemo } from "react";
 
 import { SectionItem } from "./ui/SectionItem";
 
@@ -17,19 +18,32 @@ export function DocSidebar({
   activeId = "",
   onNavigate = () => {},
 }: DocSidebarProps) {
+  const openSectionId = useMemo(() => {
+    if (!activeId) {
+      return sections[0]?.id ?? "";
+    }
+
+    const section = sections.find((item) => {
+      if (item.id === activeId) {
+        return true;
+      }
+
+      return item.items?.some((subItem) => subItem.id === activeId);
+    });
+
+    return section?.id ?? sections[0]?.id ?? "";
+  }, [activeId, sections]);
+
   return (
     <nav aria-label="Documentation navigation">
-      {/* Nav sections */}
-      <div style={{ padding: "12px 10px 24px", flex: 1 }}>
+      <div className="flex flex-col flex-1 p-2 bg-gray-50 rounded-lg shadow-md fixed">
         {sections.map((section) => (
           <SectionItem
             key={section.id}
             section={section}
             activeId={activeId}
+            isOpen={openSectionId === section.id}
             onNavigate={onNavigate}
-            isInitiallyOpen={
-              section.items?.some((i) => i.id === activeId) ?? false
-            }
           />
         ))}
       </div>
