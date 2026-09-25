@@ -1,8 +1,9 @@
 {
   "catalogCaseStudy": {
-    "eyebrow": "02 / Projects",
+    "eyebrowNumber": "02",
+    "eyebrowLabel": "Projects",
     "heading": "Selected projects.",
-    "intro": "Selected work focused on product, engineering and web development.",
+    "intro": "A selection of production products and projects built from the interface through to business logic.",
     "labels": {
       "role": "Role",
       "areas": "Areas",
@@ -13,21 +14,27 @@
     },
     "lms": {
       "type": "SaaS",
-      "status": "In development",
-      "title": "CostaSpanish Learning Management System",
-      "description": "Educational management platform built to centralize students, courses, lessons, plans and resources. I develop the product end to end, from the user experience to the data model, APIs and business logic.",
-      "alt": "CostaSpanish Learning Management System application view",
-      "role": "Full-Stack Development",
+      "status": "MVP in use",
+      "title": "CostaSpanish LMS",
+      "subtitle": "Educational management system",
+      "description1": "An educational management platform that centralizes students, courses, lessons, vouchers, and resources. Following the initial MVP delivery, the academy now uses the system in its day-to-day operations. The product continues to evolve iteratively, with improvements focused on reliability, automation, and user experience.",
+      "description2": "I have developed the product end to end, covering user experience, authentication and role-based access, data modelling, APIs, external integrations, and the CI/CD pipeline.",
+      "alt": "CostaSpanish LMS management dashboard shown across multiple devices",
+      "role": "Full-Stack Developer · Freelance",
       "areas": "Product · Frontend · Backend",
-      "stack": "Next.js · TypeScript · MongoDB · Firebase",
+      "stack": "Next.js · TypeScript · MongoDB · NextAuth.js · Firebase Storage",
       "primaryCta": "View case study"
     },
     "academy": {
       "type": "Web",
-      "status": "Live",
+      "status": "In production",
       "title": "CostaSpanish Academy",
-      "description": "Commercial website for a Spanish academy, built with a focus on performance, SEO, lead generation and a clear responsive experience in Spanish and English. Dynamic content and forms connect to the product foundation used by the academy.",
-      "alt": "CostaSpanish Academy website mockup",
+      "subtitle": "Commercial website for a Spanish academy",
+      "description1": "A commercial website built with Next.js, TypeScript, and Tailwind CSS to present the academy’s courses and attract new students. It includes bilingual content, technical SEO, database-connected forms, and a conversion-focused responsive experience.",
+      "description2": "The website is live and continues to evolve alongside the academy’s commercial needs.",
+      "alt": "Responsive mockup of the CostaSpanish Academy commercial website",
+      "role": "Full-Stack Developer",
+      "areas": "Frontend · SEO · Conversion",
       "stack": "Next.js · TypeScript · Tailwind CSS · MongoDB · i18n",
       "primaryCta": "Visit website"
     }
