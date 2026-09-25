@@ -1,65 +1,98 @@
 {
   "aboutMe": {
-    "title": "About me",
+    "eyebrow": "03 / About",
+    "headline": {
+      "line1": "I build software",
+      "line2": "beyond",
+      "line3": "the interface."
+    },
     "intro": {
-      "paragraph1": "Full-Stack Developer working with a TypeScript · Next.js · Node.js · MongoDB stack. I combine a Computer Engineering background with real production development, currently building CostaSpanish Academy, an LMS SaaS platform deployed on Vercel with CI/CD through GitHub Actions.",
-      "paragraph2": "I have hands-on experience building complete web applications, from REST API design to authentication, internationalization, and file management with Firebase. I focus on building clear, scalable, and well-structured products with both technical judgment and product mindset.",
-      "paragraph3": "I am looking to join a team where I can contribute from day one, keep growing as an engineer, and help build real products that deliver value."
+      "paragraph1": "I’m a full-stack developer and Computer Engineering student specializing in React, Next.js, TypeScript, Node.js, and MongoDB. I work across complete products, from user experience and APIs to data modelling, authentication, and deployment.",
+      "paragraph2": "I’m currently looking to join a team where I can contribute from day one, continue growing as an engineer, and deepen my knowledge of backend development, architecture, and cloud."
     },
-    "education": {
-      "title": "Education y Certificates",
-      "item1": {
-        "degree": "Web Application Development",
-        "meta": "2022/2024 - Alfonso X el Sabio University"
+    "technicalAreas": {
+      "sectionLabel": "Technical areas",
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
       },
-      "item2": {
-        "degree": "Computer Engineering (ongoing)",
-        "subtitle":" Modalidad Online completamente compatible con trabajos a jornada completa",
-        "meta": "Current - Alfonso X el Sabio University"
+      "backend": {
+        "title": "Backend and APIs",
+        "items": ["Node.js", "Express", "REST APIs", "NextAuth.js"]
       },
-      "item3": {
-        "degree": "Preliminary English Cambridge",
-        "subtitle":"Currently preparing for the Cambridge B2 (FCE)."
-      }
-    },
-    "technicalTraining": {
-      "title": "Technical Background",
-      "subtitle": "Core technologies and complementary training",
-      "items": {
-        "uxui": "UX/UI Design",
-        "javascript": "JavaScript",
-        "typescript": "TypeScript",
-        "react": "React",
-        "nodejs": "NodeJS",
-        "nextjs": "NextJS"
+      "data": {
+        "title": "Data",
+        "items": ["MongoDB", "Mongoose", "MySQL"]
+      },
+      "delivery": {
+        "title": "Quality and delivery",
+        "items": ["Playwright", "GitHub Actions", "Docker", "Vercel"]
       }
     },
     "experience": {
-      "title": "Work Experience",
-      "subtitle": "Real experience through internship and production projects.",
-      "item1": {
-        "role": "Sección9 - Web Development (Internship)",
-        "meta": "Oct 2024 - Jan 2025 · Barcelona, Spain",
-        "points": [
-          "Developed custom web solutions with WordPress and improved Laravel-based architectures.",
-          "Worked in an agile environment managing tickets, prioritizing tasks, and tracking deliveries under Scrum methodology.",
-          "Implemented interfaces from Figma designs, improving user experience, performance, and interactivity."
-        ]
-      },
-      "item2": {
-        "role": "CostaSpanish Academy - LMS SaaS",
-        "meta": "May 2025 - Present · Production project",
-        "points": [
-          {
-            "title": "SaaS platform for a language academy.",
-            "description": "Centralized educational management system with business logic for students, plans, credits, lessons, and pedagogical history."
-          },
-          {
-            "title": "Stack and deployment.",
-            "description": "Next.js, TypeScript, MongoDB, Firebase Storage, NextAuth, and next-intl. Deployed on Vercel with CI/CD, E2E testing, and external service integrations."
-          }
-        ]
-      }
+      "title": "Experience",
+      "items": [
+        {
+          "period": "January 2026 — Present",
+          "title": "Full Stack Developer · Freelance",
+          "organization": "CostaSpanish Academy",
+          "subtitle": "Management SaaS for a language academy",
+          "description1": "End-to-end development of a platform with authentication, students, bookings, credit packages, and an administration dashboard.",
+          "description2": "NextAuth.js with role-based access, MongoDB/Mongoose, Google Calendar API, and CI/CD with GitHub Actions and Vercel."
+        },
+        {
+          "period": "October 2024 — January 2025",
+          "title": "Web Developer · Internship",
+          "organization": "Sección9",
+          "description1": "Development of WordPress and PHP solutions, collaboration on Laravel projects, and interface implementation from Figma.",
+          "description2": "Work with Jira and Scrum, bug fixing, code review, and cross-browser compatibility."
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "title": "University Degree in Computer Engineering",
+          "organization": "Alfonso X el Sabio University",
+          "detail": "3rd year · Online format compatible with full-time work"
+        },
+        {
+          "period": "2022 — 2024",
+          "title": "Higher Technician in Web Application Development",
+          "organization": "Alfonso X el Sabio University",
+          "detail": "Higher education in web application development"
+        }
+      ]
+    },
+    "currentFocus": {
+      "title": "Current focus",
+      "items": [
+        { "label": "English", "value": "B2 in progress" },
+        {
+          "label": "Cloud",
+          "value": "AWS",
+          "secondary": "Developer Associate · In progress"
+        },
+        { "label": "Focus", "value": "Backend / Architecture" }
+      ]
+    },
+    "approach": {
+      "title": "How I work",
+      "items": [
+        {
+          "title": "Product",
+          "description": "Solve concrete needs before adding complexity."
+        },
+        {
+          "title": "Engineering",
+          "description": "Maintainable code, clear models, and explicit logic."
+        },
+        {
+          "title": "Evolution",
+          "description": "Build a foundation that can grow without being rebuilt."
+        }
+      ]
     }
   }
 }

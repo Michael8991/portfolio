@@ -1,98 +1,131 @@
 "use client";
 
-import { faDribbble, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
-import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslations } from "next-intl";
+
+const email = "michael2002982@gmail.com";
+
+const professionalProfiles = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/michaelrodrigueziranzo",
+    icon: faLinkedin,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Michael8991",
+    icon: faGithub,
+  },
+] as const;
+
 export default function Footer() {
+  const t = useTranslations("Footer");
+  const currentYear = new Date().getFullYear();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (!element) return;
 
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  const navigation = [
+    { section: "hero-section", label: t("navigation.home") },
+    { section: "about-section", label: t("navigation.about") },
+    { section: "projects-section", label: t("navigation.projects") },
+  ];
+
   return (
-    <div className="@container flex items-center justify-center w-full bg-white min-h-[200px] rounded-t-4xl py-5 mt-10 shadow-black shadow-2xl">
-      <div className="max-w-7xl grid grid-cols-1 xl:grid-cols-4 gap-4  justify-center items-stretch mx-auto">
-        <div className="flex flex-col gap-1 text-black/80 justify-center items-center">
-          <p className="text-2xl font-semibold text-center">
-            Gracias por visitar mi portfolio
-          </p>
-          <p className="text-sm text-center font-medium text-black/60 mb-3 w-80">
-            Muestra de mis proyectos y experiencia como desarrollador
-            full-stack, con enfoque en aplicaciones web modernas.
-          </p>
-        </div>
-        <div className="flex flex-col items-center gap-2 text-black/60">
-          <p className="text-sm font-semibold text-center text-black/80">
-            Links
-          </p>
-          <button
-            className="hover:cursor-pointer"
-            onClick={() => scrollToSection("hero-section")}
+    <footer
+      id="site-footer"
+      className="w-full rounded-t-[24px] border-t border-stone-950/[0.07] bg-[#fffaf7] px-4 pt-9 text-[#151515] sm:px-6 sm:pt-10 lg:px-8"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-9 md:grid-cols-2 md:gap-x-12 md:gap-y-10 lg:grid-cols-[1.4fr_.7fr_1fr] lg:gap-12">
+          <section aria-labelledby="footer-intro-heading">
+            <h2
+              id="footer-intro-heading"
+              className="text-xl font-semibold tracking-[-0.02em] text-[#151515]"
+            >
+              {t("title")}
+            </h2>
+            <p className="mt-2.5 max-w-[19rem] text-sm leading-[1.65] text-[#5E5A54]">
+              {t("description")}
+            </p>
+          </section>
+
+          <nav aria-label={t("navigationAria")}>
+            <h2 className="text-sm font-semibold text-[#151515]">
+              {t("navigationTitle")}
+            </h2>
+            <ul className="mt-2.5 space-y-0.5">
+              {navigation.map((item) => (
+                <li key={item.section}>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection(item.section)}
+                    className="group inline-flex min-h-11 items-center text-sm font-medium text-[#5E5A54] transition-[color,transform] duration-200 hover:translate-x-0.5 hover:text-[#c94f17] focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c94f17] motion-reduce:transform-none"
+                  >
+                    <span className="border-b border-transparent group-hover:border-current">
+                      {item.label}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <section
+            aria-labelledby="footer-contact-heading"
+            className="md:col-span-2 lg:col-span-1"
           >
-            Home
-          </button>
-          <button
-            className="hover:cursor-pointer"
-            onClick={() => scrollToSection("about-section")}
-          >
-            About me
-          </button>
-          <button
-            className="hover:cursor-pointer"
-            onClick={() => scrollToSection("projects-section")}
-          >
-            Projects
-          </button>
+            <h2
+              id="footer-contact-heading"
+              className="text-sm font-semibold text-[#151515]"
+            >
+              {t("contactTitle")}
+            </h2>
+            <a
+              href={`mailto:${email}`}
+              className="mt-2.5 inline-flex min-h-11 max-w-full items-center gap-2 text-sm font-medium text-[#5E5A54] transition-colors hover:text-[#c94f17] focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c94f17]"
+            >
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="size-4 shrink-0"
+                aria-hidden="true"
+              />
+              <span className="break-all sm:break-normal">{email}</span>
+            </a>
+
+            <div className="mt-3.5 flex items-center gap-2">
+              {professionalProfiles.map((profile) => (
+                <a
+                  key={profile.name}
+                  href={profile.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t(`profiles.${profile.name.toLowerCase()}`)}
+                  className="grid size-11 place-items-center rounded-lg text-[#5E5A54] transition-[color,background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-stone-950/[0.05] hover:text-[#151515] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c94f17] motion-reduce:transform-none"
+                >
+                  <FontAwesomeIcon
+                    icon={profile.icon}
+                    className="size-[21px]"
+                    aria-hidden="true"
+                  />
+                </a>
+              ))}
+            </div>
+          </section>
         </div>
-        <div className="flex flex-col items-center gap-2 text-black/60">
-          <p className="text-sm font-semibold text-center text-black/80">
-            Contacta conmigo
+
+        <div className="mt-8 border-t border-stone-950/[0.07] py-4">
+          <p className="text-xs text-[#5E5A54]/85">
+            © {currentYear} {t("copyrightName")}
           </p>
-          <a href="mailto:michael2002982@gmail.com">
-            michael2002982@gmail.com{" "}
-            <FontAwesomeIcon icon={faSquareArrowUpRight} />
-          </a>
-          <p className="">+34 68 05 08 750</p>
-        </div>
-        <div className="flex flex-col items-center gap-2 text-black/60 ">
-          <p className="text-center text-sm font-semibold text-black/80">
-            Sígueme
-          </p>
-          <div className="flex flex-wrap gap-2 justify-center items-center">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/_michael98_/"
-            >
-              <FontAwesomeIcon icon={faInstagram} size="xl" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/michaelrodrigueziranzo"
-            >
-              <FontAwesomeIcon icon={faLinkedin} size="xl" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/Michael8991"
-            >
-              <FontAwesomeIcon icon={faGithub} size="xl" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://dribbble.com/Michael9881"
-            >
-              <FontAwesomeIcon icon={faDribbble} size="xl" />
-            </a>
-          </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

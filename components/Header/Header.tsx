@@ -1,92 +1,109 @@
 "use client";
-import {} from "@fortawesome/free-brands-svg-icons";
-import {
-  faFolder,
-  faHouse,
-  // faPenToSquare,
-  faUser,
-} from "@fortawesome/free-regular-svg-icons";
+
+import { faEnvelope, faFolder, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocale } from "next-intl";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-const navItems = [
-  { section: "hero-section", label: "Inicio", icon: faHouse },
-  { section: "about-section", label: "Sobre mí", icon: faUser },
-  { section: "projects-section", label: "Proyectos", icon: faFolder },
-  // { section: "contact-section", label: "Contacto", icon: faPenToSquare },
-];
+const navigation = {
+  es: [
+    { section: "projects-section", label: "Proyectos", icon: faFolder },
+    { section: "about-section", label: "Sobre mí", icon: faUser },
+  ],
+  en: [
+    { section: "projects-section", label: "Projects", icon: faFolder },
+    { section: "about-section", label: "About", icon: faUser },
+  ],
+};
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = useLocale() === "en" ? "en" : "es";
+  const homePath = `/${currentLocale}`;
+  const isHome = pathname === homePath || pathname === `${homePath}/`;
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (!element) return;
-
-    const hash = `#${id}`;
-    window.history.replaceState(null, "", hash);
-
+    window.history.replaceState(null, "", `#${id}`);
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const router = useRouter();
-  const pathname = usePathname();
-  const currentLocale = useLocale();
-
   const changeLocale = (locale: "es" | "en") => {
     const cleanPath = pathname.replace(/^\/(es|en)/, "");
-    const hash = window.location.hash;
-
-    router.replace(`/${locale}${cleanPath}${hash}`, { scroll: false });
+    router.replace(`/${locale}${cleanPath}${window.location.hash}`, {
+      scroll: false,
+    });
   };
 
   return (
-    <header className="w-full flex justify-center py-5 fixed z-10">
-      <nav className="flex items-center gap-5 rounded-2xl bg-orange-100 px-5 py-2 shadow-lg/20 ">
-        {navItems.map((item) => (
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 sm:pt-5">
+      <nav
+        aria-label={
+          currentLocale === "es" ? "Navegación principal" : "Main navigation"
+        }
+        className="flex max-w-full items-center gap-0.5 rounded-2xl border border-[var(--hero-border)] bg-white/85 p-1.5 text-[var(--hero-forest)] shadow-[0_10px_30px_rgba(23,59,46,0.10)] backdrop-blur-xl sm:gap-1 sm:px-2"
+      >
+        <Link
+          href={homePath}
+          aria-label={currentLocale === "es" ? "Ir al inicio" : "Go to home"}
+          aria-current={isHome ? "page" : undefined}
+          className={`grid size-11 shrink-0 place-items-center rounded-xl transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--hero-forest)] sm:size-10 ${
+            isHome
+              ? "bg-[var(--hero-lime)] text-[var(--hero-forest)] shadow-sm"
+              : "hover:bg-[var(--hero-lime-subtle)]"
+          }`}
+        >
+          <FontAwesomeIcon icon={faHouse} aria-hidden="true" />
+        </Link>
+
+        {navigation[currentLocale].map((item) => (
           <button
             key={item.section}
+            type="button"
             onClick={() => scrollToSection(item.section)}
-            className="group hover:cursor-pointer relative flex h-9 w-9 items-center justify-center rounded-lg text-orange-500 hover:text-orange-700 hover:bg-orange-200 transition"
+            aria-label={item.label}
+            className="flex min-h-11 items-center gap-1.5 rounded-xl px-2 text-xs font-semibold transition-colors hover:bg-[var(--hero-lime-subtle)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--hero-forest)] sm:min-h-10 sm:px-3 sm:text-sm"
           >
-            <FontAwesomeIcon icon={item.icon} size="lg" />
-
-            <span
-              className="
-                pointer-events-none
-                absolute left-1/2 -translate-x-1/2
-                -translate-y-10 opacity-0
-                mt-2
-                rounded-xl bg-body-secondary px-3 py-1
-                text-xs text-white/90
-                whitespace-nowrap
-                shadow-md
-                transition
-                ease-in-out 
-                duration-400
-                group-hover:opacity-100 group-hover:translate-y-11
-              "
-            >
-              {item.label}
-            </span>
+            <FontAwesomeIcon icon={item.icon} aria-hidden="true" />
+            <span className="max-[439px]:sr-only">{item.label}</span>
           </button>
         ))}
-        <div className="flex items-center gap-1 ml-1 pl-4 border-l border-orange-600">
+
+        <a
+          href="mailto:michael2002982@gmail.com"
+          aria-label={currentLocale === "es" ? "Contacto" : "Contact"}
+          className="flex min-h-11 items-center gap-1.5 rounded-xl px-2 text-xs font-semibold transition-colors hover:bg-[var(--hero-lime-subtle)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--hero-forest)] sm:min-h-10 sm:px-3 sm:text-sm"
+        >
+          <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
+          <span className="max-[639px]:sr-only">
+            {currentLocale === "es" ? "Contacto" : "Contact"}
+          </span>
+        </a>
+
+        <div
+          className="ml-0.5 flex items-center border-l border-[var(--hero-border)] pl-1 sm:ml-1 sm:pl-2"
+          aria-label={
+            currentLocale === "es" ? "Cambiar idioma" : "Change language"
+          }
+        >
           {(["es", "en"] as const).map((locale) => (
             <button
               key={locale}
+              type="button"
               onClick={() => changeLocale(locale)}
-              className={`
-        relative flex h-9 w-9 items-center justify-center rounded-lg
-        text-xs font-semibold tracking-widest uppercase
-        transition cursor-pointer
-        ${
-          currentLocale === locale
-            ? "bg-orange-700 text-white shadow-md shadow-red-900/40"
-            : "text-black/50 hover:text-black hover:bg-white/5"
-        }
-      `}
+              aria-pressed={currentLocale === locale}
+              aria-label={locale === "es" ? "Español" : "English"}
+              className={`flex h-9 w-8 items-center justify-center rounded-lg text-[11px] font-bold uppercase tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[var(--hero-forest)] sm:w-9 ${
+                currentLocale === locale
+                  ? "bg-[var(--hero-forest)] text-white shadow-sm"
+                  : "text-[var(--hero-muted)] hover:bg-[var(--hero-lime-subtle)] hover:text-[var(--hero-forest)]"
+              }`}
             >
-              {locale.toUpperCase()}
+              {locale}
             </button>
           ))}
         </div>

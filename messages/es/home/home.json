@@ -1,8 +1,15 @@
 {
   "Hero": {
-    "titlePrimary": "FULLSTACK",
+    "name": "Michael Rodríguez",
+    "titlePrimary": "FULL-STACK",
     "titleSecondary": "DEVELOPER",
-    "description": "Construyo aplicaciones SaaS full-stack, implementando lógica de negocio, APIs y sistemas escalables listos para producción.",
+    "stack": "React · Next.js · TypeScript · Node.js",
+    "stackLabel": "Stack principal",
+    "photoAlt": "Michael Rodríguez, desarrollador full-stack",
+    "description": "Desarrollador full-stack especializado en React, Next.js, TypeScript y Node.js. He construido y desplegado productos end-to-end, desde la arquitectura y las APIs hasta el testing, CI/CD y la experiencia de usuario.",
+    "statusLabel": "Disponibilidad",
+    "locationLabel": "Ubicación",
+    "location": "Málaga · Remoto España",
     "connectLine1": "Conecta",
     "connectLine2": "conmigo",
     "technologies": {

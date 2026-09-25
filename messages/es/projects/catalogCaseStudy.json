@@ -1,38 +1,35 @@
 {
   "catalogCaseStudy": {
-    "project1": {
-      "alt": "Imagen del proyecto Costa Spanish Academy",
-      "title": "CostaSpanish Academy",
-      "subtitle": "Landing page para venta y presentación de cursos de español.",
-      "desc": "Landing page de alto rendimiento desarrollada con Next.js, TypeScript y Tailwind para una academia de español como lengua extranjera. La plataforma integra SEO avanzado, i18n, formularios de captación orientados a conversión y contenido dinámico extraído desde una base de datos en MongoDB. Su arquitectura modular y escalable está diseñada para evolucionar hacia un LMS completo, incorporando buenas prácticas de accesibilidad, rendimiento y despliegue CI/CD en Vercel.",
-      "category": [
-        "Next.js 14",
-        "TypeScript",
-        "Tailwind CSS",
-        "MongoDB",
-        "i18n / Multi-idioma",
-        "SEO Técnico",
-        "Lead Generation",
-        "Arquitectura Escalable",
-        "CI/CD en Vercel"
-      ]
+    "eyebrow": "02 / Proyectos",
+    "heading": "Proyectos seleccionados.",
+    "intro": "Proyectos centrados en producto, ingeniería y desarrollo web.",
+    "labels": {
+      "role": "Rol",
+      "areas": "Áreas",
+      "stack": "Stack",
+      "github": "GitHub",
+      "demo": "Demo",
+      "caseStudy": "Caso de estudio"
     },
-    "project2": {
-      "alt": "SaaS para gestión educativa",
-      "title": "Learning System Managment CostaSpanish",
-      "subtitle": "SaaS para gestión educativa",
-      "desc": "Plataforma SaaS full-stack desarrollada con Next.js y TypeScript, orientada a la automatización de la gestión educativa. El núcleo del sistema es un motor de lógica de negocio respaldado por MongoDB, que gestiona perfiles pedagógicos y un sistema transaccional de créditos en tiempo real. A nivel frontend, destaca la implementación de interfaces altamente interactivas y formularios multipaso con gestión de estado global optimizada (evitando prop drilling y cascading renders) mediante react-hook-form y validación tipada con Zod.",
-      "category": [
-        "Next.js App Router",
-        "TypeScript",
-        "Firebase Storage",
-        "MongoDB",
-        "React Hook Form",
-        "Zod",
-        "Arquitectura SaaS",
-        "Formularios Complejos",
-        "OAuth"
-      ]
+    "lms": {
+      "type": "SaaS",
+      "status": "En desarrollo",
+      "title": "CostaSpanish Learning Management System",
+      "description": "Plataforma de gestión educativa creada para centralizar alumnos, cursos, clases, bonos y recursos. Desarrollo el producto de extremo a extremo, desde la experiencia de usuario hasta el modelo de datos, las APIs y la lógica de negocio.",
+      "alt": "Vista de la aplicación CostaSpanish Learning Management System",
+      "role": "Desarrollo Full-Stack",
+      "areas": "Producto · Frontend · Backend",
+      "stack": "Next.js · TypeScript · MongoDB · Firebase",
+      "primaryCta": "Ver caso de estudio"
+    },
+    "academy": {
+      "type": "Web",
+      "status": "En producción",
+      "title": "CostaSpanish Academy",
+      "description": "Web comercial para una academia de español, desarrollada con foco en rendimiento, SEO, captación y una experiencia responsive clara en español e inglés. El contenido dinámico y los formularios están conectados a la base de producto utilizada por la academia.",
+      "alt": "Mockup de la web CostaSpanish Academy",
+      "stack": "Next.js · TypeScript · Tailwind CSS · MongoDB · i18n",
+      "primaryCta": "Visitar web"
     }
   }
 }

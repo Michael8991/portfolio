@@ -17,8 +17,8 @@ export default async function Home({
     >
       <Header />
       <HeroSection locale={locale} />
-      <AboutSection />
       <ProjectsSection locale={locale} />
+      <AboutSection />
       <Footer />
     </div>
   );

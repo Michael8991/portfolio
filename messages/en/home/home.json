@@ -1,8 +1,15 @@
 {
   "Hero": {
-    "titlePrimary": "FULLSTACK",
+    "name": "Michael Rodríguez",
+    "titlePrimary": "FULL-STACK",
     "titleSecondary": "DEVELOPER",
-    "description": "I build clear, modern and well-structured applications, combining frontend and backend with a practical, results-driven approach.",
+    "stack": "React · Next.js · TypeScript · Node.js",
+    "stackLabel": "Core stack",
+    "photoAlt": "Michael Rodríguez, full-stack developer",
+    "description": "Full-stack developer specializing in React, Next.js, TypeScript, and Node.js. I build and deploy end-to-end products, from architecture and APIs to testing, CI/CD, and user experience.",
+    "statusLabel": "Availability",
+    "locationLabel": "Location",
+    "location": "Málaga · Remote within Spain",
     "connectLine1": "Connect",
     "connectLine2": "with me",
     "technologies": {

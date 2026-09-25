@@ -6,8 +6,26 @@
       "demo": "Demo",
       "caseStudy": "Caso de estudio",
       "viewProjects": "Ver proyectos",
-      "openToWork": "Disponible para trabajar"
+      "downloadCV": "Descargar CV",
+      "openToWork": "Abierto a oportunidades"
       
     }
+  },
+  "Footer": {
+    "title": "¿Hablamos?",
+    "description": "Estoy abierto a oportunidades en desarrollo full-stack y frontend, en Málaga o en remoto.",
+    "navigationTitle": "Navegación",
+    "navigationAria": "Navegación secundaria",
+    "navigation": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "projects": "Proyectos"
+    },
+    "contactTitle": "Contacto",
+    "profiles": {
+      "linkedin": "LinkedIn de Michael Rodríguez",
+      "github": "GitHub de Michael Rodríguez"
+    },
+    "copyrightName": "Michael Rodríguez"
   }
 }

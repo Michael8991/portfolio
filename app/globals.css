@@ -3,6 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --hero-background: #f7f9f4;
+  --hero-surface: rgba(255, 255, 255, 0.72);
+  --hero-surface-strong: rgba(255, 255, 255, 0.88);
+  --hero-lime: #b7ff38;
+  --hero-lime-soft: #e8ffc4;
+  --hero-lime-subtle: rgba(183, 255, 56, 0.18);
+  --hero-forest: #173b2e;
+  --hero-ink: #111713;
+  --hero-muted: #5f6961;
+  --hero-border: rgba(23, 59, 46, 0.1);
 }
 
 @theme inline {
@@ -33,8 +43,12 @@
   }
 }
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: var(--font-montserrat), system-ui, sans-serif;
+    overflow-x: hidden;
   }
   .user-name-font {
     font-family: var(--font-anton), system-ui, sans-serif;
@@ -45,6 +59,12 @@
 
   .title-name-font {
     font-family: var(--font-pinyonScript), system-ui, sans-serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 

@@ -1,10 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import photoCV from "@/public/michaelPhoto.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
+import { useLocale } from "next-intl";
 
 export default function MainCard() {
+  const locale = useLocale();
+  const cvFile =
+    locale === "en"
+      ? "ENJul26MichaelRodriguezSoftwareDeveloper.pdf"
+      : "ESPJul26MichaelRodriguezSoftwareDeveloper.pdf";
+
   return (
     <div>
       <div className="bg-white rounded-xl px-4 py-8 flex flex-col items-center">
@@ -41,13 +50,12 @@ export default function MainCard() {
       </div>
       <div className="mt-10 w-full flex items-center justify-center">
         <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/Michael_Rodriguez_Junior_FullStack_CV.pdf"
+          href={`/${cvFile}`}
+          download={cvFile}
           className="flex items-center hover:scale-105 transition duration-200 ease-in-out"
         >
           <div className="flex items-center  bg-white text-black p-3 rounded-2xl">
-            <span>Descargar CV</span>
+            <span>{locale === "en" ? "Download resume" : "Descargar CV"}</span>
             <div className="ms-2 bg-[#F29057] rounded-sm">
               <svg
                 width="24"
