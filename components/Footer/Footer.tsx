@@ -5,6 +5,8 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslations } from "next-intl";
 
+import { preferredScrollBehavior } from "@/lib/motion";
+
 const email = "michael2002982@gmail.com";
 
 const professionalProfiles = [
@@ -28,7 +30,10 @@ export default function Footer() {
     const element = document.getElementById(id);
     if (!element) return;
 
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    element.scrollIntoView({
+      behavior: preferredScrollBehavior(),
+      block: "start",
+    });
   };
 
   const navigation = [

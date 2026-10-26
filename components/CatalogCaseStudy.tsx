@@ -3,8 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-import academyMockup from "@/public/CostaSpanishAcademy/mockupversionmobilecostaspanishlanding.png";
-import lmsMockup from "@/public/CostaSpanishAcademy/MockCostaSpanishLMS.png";
+import { featuredCaseStudies } from "@/lib/case-studies";
 
 interface CatalogCaseStudyProps {
   locale: string;
@@ -22,7 +21,7 @@ type ProjectData = {
   role: string;
   areas: string;
   stack: string;
-  caseStudyId: string;
+  caseStudyPath: string;
   github: string;
   demo?: string;
   website?: string;
@@ -91,11 +90,9 @@ function PrimaryAction({
 
 function ProjectArticle({
   project,
-  locale,
   labels,
 }: {
   project: ProjectData;
-  locale: string;
   labels: {
     role: string;
     areas: string;
@@ -169,7 +166,7 @@ function ProjectArticle({
             href={
               project.website
                 ? project.website
-                : `/${locale}/projects/${project.caseStudyId}`
+                : project.caseStudyPath
             }
             external={Boolean(project.website)}
           >
@@ -178,7 +175,7 @@ function ProjectArticle({
 
           {project.website ? (
             <Link
-              href={`/${locale}/projects/${project.caseStudyId}`}
+              href={project.caseStudyPath}
               className={`${secondaryLinkClassName} group`}
             >
               {labels.caseStudy}
@@ -221,43 +218,36 @@ export default function CatalogCaseStudy({ locale }: CatalogCaseStudyProps) {
     caseStudy: t("labels.caseStudy"),
   };
 
-  const projects: ProjectData[] = [
-    {
-      number: "01",
-      type: t("lms.type"),
-      status: t("lms.status"),
-      title: t("lms.title"),
-      subtitle: t("lms.subtitle"),
-      descriptions: [t("lms.description1"), t("lms.description2")],
-      alt: t("lms.alt"),
-      image: lmsMockup,
-      role: t("lms.role"),
-      areas: t("lms.areas"),
-      stack: t("lms.stack"),
-      caseStudyId: "002",
-      github: "https://github.com/Michael8991/costaspanish-lms",
-      demo: `/${locale}/projects/002/demo`,
-      primaryLabel: t("lms.primaryCta"),
+  const projects: ProjectData[] = featuredCaseStudies.map(
+    (caseStudy, index) => {
+      const contentKey = caseStudy.content.catalogKey;
+
+      return {
+        number: String(index + 1).padStart(2, "0"),
+        type: t(`${contentKey}.type`),
+        status: t(`${contentKey}.status`),
+        title: t(`${contentKey}.title`),
+        subtitle: t(`${contentKey}.subtitle`),
+        descriptions: [
+          t(`${contentKey}.description1`),
+          t(`${contentKey}.description2`),
+        ],
+        alt: t(`${contentKey}.alt`),
+        image: caseStudy.media.cover.src,
+        role: t(`${contentKey}.role`),
+        areas: t(`${contentKey}.areas`),
+        stack: t(`${contentKey}.stack`),
+        caseStudyPath: `/${locale}${caseStudy.route}`,
+        github: caseStudy.links.repository,
+        demo: caseStudy.links.demoRoute
+          ? `/${locale}${caseStudy.links.demoRoute}`
+          : undefined,
+        website: caseStudy.links.website,
+        primaryLabel: t(`${contentKey}.primaryCta`),
+        imageFirstDesktop: caseStudy.kind === "landing",
+      };
     },
-    {
-      number: "02",
-      type: t("academy.type"),
-      status: t("academy.status"),
-      title: t("academy.title"),
-      subtitle: t("academy.subtitle"),
-      descriptions: [t("academy.description1"), t("academy.description2")],
-      alt: t("academy.alt"),
-      image: academyMockup,
-      role: t("academy.role"),
-      areas: t("academy.areas"),
-      stack: t("academy.stack"),
-      caseStudyId: "001",
-      github: "https://github.com/Michael8991/costaspanish-academy",
-      website: "https://www.costaspanishclass.com",
-      primaryLabel: t("academy.primaryCta"),
-      imageFirstDesktop: true,
-    },
-  ];
+  );
 
   return (
     <div className="mt-[clamp(4.5rem,7vw,6rem)]">
@@ -265,7 +255,6 @@ export default function CatalogCaseStudy({ locale }: CatalogCaseStudyProps) {
         <ProjectArticle
           key={project.number}
           project={project}
-          locale={locale}
           labels={labels}
         />
       ))}

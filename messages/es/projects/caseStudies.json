@@ -1,0 +1,423 @@
+{
+  "caseStudies": {
+    "navigation": {
+      "ariaLabel": "Navegación del caso de estudio",
+      "eyebrow": "Caso de estudio",
+      "title": "En esta página",
+      "mobileTrigger": "En esta página"
+    },
+    "demo": {
+      "title": "Demo de CostaSpanish LMS",
+      "badge": "En construcción",
+      "description": "Esta demo está siendo construida. Puedes seguir el progreso del código en GitHub mientras tanto.",
+      "github": "Ver código en GitHub"
+    },
+    "academy": {
+      "media": {
+        "responsive": {
+          "alt": "Tres vistas móviles del sitio de CostaSpanish Academy: inicio, cursos y contacto"
+        },
+        "redesign": {
+          "alt": "Rediseño responsive de CostaSpanish Academy presentado en un portátil y un teléfono",
+          "eyebrow": "Sistema responsive",
+          "title": "Una misma jerarquía, dos contextos de uso",
+          "caption": "La composición mantiene visibles la propuesta de valor, la acción principal y la identidad de marca en escritorio y móvil. El contenido cambia de escala y orden sin perder los puntos de decisión del recorrido comercial."
+        },
+        "previousLanding": {
+          "alt": "Captura de la cabecera de una iteración anterior de CostaSpanish Academy",
+          "eyebrow": "Evidencia de evolución",
+          "title": "La dirección inicial antes del rediseño",
+          "caption": "Esta captura, recuperada del historial del repositorio, documenta una iteración anterior de la landing. El rediseño posterior simplifica la navegación, concentra la propuesta de valor y construye una relación más clara entre marca, contenido y acción principal."
+        }
+      },
+      "sections": {
+        "context": {
+          "label": "Contexto y oportunidad",
+          "intro": "CostaSpanish Academy es la web comercial de una academia de español y el principal punto público para presentar su oferta formativa a nuevos alumnos.",
+          "paragraphs": [
+            "La web organiza una propuesta educativa que incluye distintas modalidades de aprendizaje y necesita explicar con claridad qué ofrece la academia, para quién es cada opción y cómo dar el siguiente paso.",
+            "Dentro del ecosistema del proyecto, la landing cumple una función concreta: conectar el posicionamiento de la academia con el descubrimiento de cursos y la captación de personas interesadas."
+          ]
+        },
+        "strategy": {
+          "label": "Estrategia comercial",
+          "intro": "La estructura comercial convierte la oferta formativa en un recorrido comprensible, con una propuesta de valor visible y acciones claras para explorar cursos o contactar.",
+          "paragraphs": [
+            "El contenido prioriza primero la promesa de aprendizaje y después presenta los elementos necesarios para decidir: enfoque de la academia, modalidades, cursos y vías de contacto.",
+            "Los CTAs y formularios forman parte del recorrido de captación. Su función es reducir la distancia entre entender la oferta y comenzar una conversación con la academia, sin presentar como conversión medida lo que todavía no dispone de métricas publicadas."
+          ],
+          "items": [
+            {
+              "title": "Claridad de oferta",
+              "body": "La jerarquía separa propuesta de valor, información de cursos y contacto para que cada bloque responda a una pregunta concreta del visitante."
+            },
+            {
+              "title": "Recorrido de captación",
+              "body": "Los puntos de acción conectan el descubrimiento de la oferta con formularios respaldados por la capa de datos del proyecto."
+            }
+          ]
+        },
+        "design": {
+          "label": "Diseño y experiencia de usuario",
+          "intro": "La dirección visual busca que una marca educativa se sienta cercana y reconocible sin perder jerarquía comercial ni facilidad de lectura.",
+          "paragraphs": [
+            "La interfaz combina una identidad gráfica expresiva con títulos de alto contraste, bloques de contenido amplios y llamadas a la acción fáciles de localizar. La composición evita que la personalidad de marca compita con la información principal.",
+            "Desktop y móvil reorganizan la misma narrativa en lugar de limitarse a reducirla. La navegación, las fichas de cursos, el contacto y los formularios se adaptan para conservar contexto y áreas táctiles cómodas en pantallas pequeñas."
+          ],
+          "items": [
+            {
+              "title": "Jerarquía",
+              "body": "Mensajes principales, oferta y acciones mantienen niveles visuales diferenciados para favorecer un escaneo rápido."
+            },
+            {
+              "title": "Sistema responsive",
+              "body": "La experiencia está construida para conservar legibilidad, ritmo y acceso a las acciones tanto en escritorio como en móvil."
+            }
+          ]
+        },
+        "seo": {
+          "label": "SEO y crecimiento orgánico",
+          "intro": "La web incluye una base de SEO técnico y contenido bilingüe; el trabajo orgánico se documenta aquí sin atribuir rankings, tráfico o resultados que todavía no están respaldados por datos publicados.",
+          "paragraphs": [
+            "El alcance entregado contempla la preparación técnica de una web pública indexable y una estructura de contenido que puede evolucionar junto con la oferta de la academia.",
+            "El siguiente nivel de este capítulo requerirá incorporar evidencia específica: investigación de palabras clave, intención de búsqueda, arquitectura de contenidos, indexación, rendimiento y resultados medidos. Esa profundización queda explícitamente en evolución."
+          ],
+          "items": [
+            {
+              "title": "Base documentada",
+              "body": "SEO técnico y contenido en español e inglés forman parte de las capacidades actuales de la web."
+            },
+            {
+              "title": "Profundización futura",
+              "body": "La estrategia y los resultados orgánicos se ampliarán únicamente cuando exista evidencia verificable para cada decisión y métrica."
+            }
+          ]
+        },
+        "development": {
+          "label": "Desarrollo e implementación",
+          "intro": "La implementación combina Next.js, TypeScript y Tailwind CSS con internacionalización y una capa de datos para sostener la experiencia comercial.",
+          "paragraphs": [
+            "Los componentes y el comportamiento responsive permiten mantener una experiencia coherente entre páginas y tamaños de pantalla sin duplicar la estructura principal.",
+            "El contenido bilingüe está integrado mediante i18n y los formularios se conectan con MongoDB, de modo que la captación no queda reducida a una interfaz estática."
+          ],
+          "items": [
+            {
+              "title": "Experiencia pública",
+              "body": "Next.js, TypeScript y Tailwind CSS sostienen la composición, la adaptación responsive y la evolución del frontend."
+            },
+            {
+              "title": "Contenido y datos",
+              "body": "La internacionalización mantiene la experiencia bilingüe y MongoDB respalda los flujos de formulario conectados a datos."
+            }
+          ]
+        },
+        "results": {
+          "label": "Resultado entregado",
+          "intro": "El resultado verificable es una web comercial bilingüe en producción, preparada para presentar la oferta, captar contactos y evolucionar con las necesidades de la academia.",
+          "paragraphs": [
+            "La entrega reúne en una experiencia responsive la propuesta de valor, los cursos, las vías de contacto y los formularios conectados a datos.",
+            "Este caso no atribuye porcentajes de conversión, crecimiento de tráfico, rankings ni Core Web Vitals porque el repositorio no aporta actualmente una medición fiable que permita sostenerlos."
+          ],
+          "items": [
+            {
+              "title": "Estado actual",
+              "body": "La web está publicada y continúa utilizándose como presencia comercial de CostaSpanish Academy."
+            },
+            {
+              "title": "Capacidades entregadas",
+              "body": "Experiencia responsive, contenido bilingüe, SEO técnico y formularios conectados a la base de datos."
+            }
+          ]
+        },
+        "evolution": {
+          "label": "Evolución",
+          "intro": "La web permanece en producción y continúa evolucionando junto con las necesidades comerciales de CostaSpanish Academy.",
+          "paragraphs": [
+            "Las siguientes mejoras pueden refinar contenidos, recorridos de captación y la documentación SEO a medida que exista nueva evidencia y datos de uso.",
+            "Dentro del ecosistema, la web mantiene su papel como capa pública y comercial, mientras CostaSpanish LMS desarrolla la vertiente operativa y académica. Son productos relacionados, pero con responsabilidades distintas."
+          ],
+          "items": [
+            {
+              "title": "En evolución",
+              "body": "Refinamientos de contenido, experiencia y estrategia orgánica vinculados a necesidades reales del negocio."
+            },
+            {
+              "title": "Evolución documentada",
+              "body": "La dirección anterior y el rediseño actual quedan conectados mediante evidencia real conservada en el historial del proyecto."
+            }
+          ]
+        }
+      }
+    },
+    "lms": {
+      "actions": {
+        "demo": "Ver demo"
+      },
+      "media": {
+        "dashboard": {
+          "alt": "Mockup de CostaSpanish LMS con vistas de libro de clases, economía y planificación de lecciones",
+          "eyebrow": "Producto en uso",
+          "title": "Una operativa conectada, no una colección de pantallas",
+          "caption": "Las vistas de clases, economía y planificación comparten el mismo contexto operativo. El objetivo del sistema es que alumnos, sesiones, asistencia, créditos y cobros formen parte de un flujo consistente."
+        }
+      },
+      "sections": {
+        "product": {
+          "label": "Producto y visión",
+          "intro": "CostaSpanish LMS es la plataforma interna que centraliza la operativa académica de la academia y convierte procesos dispersos en un producto conectado.",
+          "paragraphs": [
+            "El sistema está pensado primero para profesoras y administración: reúne el contexto necesario para gestionar alumnos, cursos, clases, bonos, recursos y reglas sin depender de varias herramientas desconectadas.",
+            "El MVP ya se utiliza en la operativa diaria y continúa evolucionando. La visión no es acumular funciones, sino construir una base fiable desde la que preparar, impartir y registrar cada experiencia formativa."
+          ],
+          "items": [
+            {
+              "title": "Capa operativa",
+              "body": "Organiza el trabajo diario de la academia y mantiene relacionadas las decisiones que afectan a alumnos, clases y consumo."
+            },
+            {
+              "title": "Dirección de producto",
+              "body": "Avanza hacia una experiencia educativa más completa sin presentar como terminadas las capas públicas y de alumno que siguen en evolución."
+            }
+          ]
+        },
+        "problem": {
+          "label": "Problema y necesidades reales",
+          "intro": "La dificultad no era digitalizar una hoja de cálculo, sino mantener coherencia entre personas, oferta formativa, sesiones y derechos de uso.",
+          "paragraphs": [
+            "Cuando alumnos, horarios, materiales, bonos y seguimiento viven en herramientas distintas, una acción sencilla puede exigir varias comprobaciones manuales. Esa fragmentación aumenta el trabajo administrativo y hace más fácil que aparezcan datos contradictorios.",
+            "El producto debía representar reglas reales: quién puede asistir, qué plan está activo, cómo se consume un crédito, qué ocurre al registrar una clase y qué información necesita la profesora para continuar el proceso."
+          ],
+          "items": [
+            {
+              "title": "Contexto fragmentado",
+              "body": "La información operativa pierde valor cuando cursos, alumnos, recursos y sesiones no comparten un mismo contexto."
+            },
+            {
+              "title": "Reglas con impacto",
+              "body": "Asistencia, enrollment, bonos y créditos modifican el estado del negocio y no pueden depender sólo de decisiones de interfaz."
+            },
+            {
+              "title": "Continuidad docente",
+              "body": "Cada lección necesita recuperar objetivos, historial y recursos para que la preparación no empiece desde cero."
+            }
+          ]
+        },
+        "modules": {
+          "label": "Módulos principales",
+          "intro": "La plataforma se divide en dominios comprensibles para el negocio, pero diseñados para colaborar en los flujos que cruzan toda la operativa.",
+          "paragraphs": [
+            "La modularidad permite evolucionar una capacidad sin convertir cada pantalla en una excepción. Los límites siguen el lenguaje del producto y hacen explícitas las relaciones entre gestión académica, consumo y administración."
+          ],
+          "items": [
+            {
+              "title": "Alumnos",
+              "body": "Identidad, perfil académico y contexto necesario para relacionar al estudiante con cursos, planes y clases."
+            },
+            {
+              "title": "Cursos",
+              "body": "Definición de la oferta y configuración de experiencias formativas; los perfiles de curso continúan ganando profundidad."
+            },
+            {
+              "title": "Lecciones y horarios",
+              "body": "Planificación, registro de sesiones, asistencia y continuidad entre lo preparado y lo impartido."
+            },
+            {
+              "title": "Bonos y derechos de uso",
+              "body": "Planes, créditos y políticas de consumo que determinan qué puede utilizar cada alumno y bajo qué condiciones."
+            },
+            {
+              "title": "Recursos",
+              "body": "Materiales docentes organizados para poder encontrarlos, reutilizarlos y conectarlos con el trabajo académico."
+            },
+            {
+              "title": "Administración",
+              "body": "Roles, economía y herramientas internas para operar el servicio con una visión común del estado del sistema."
+            }
+          ]
+        },
+        "flows": {
+          "label": "Flujos de usuario",
+          "intro": "El valor aparece cuando los módulos dejan de ser islas y una decisión mantiene su significado durante todo el recorrido.",
+          "paragraphs": [
+            "Estos flujos resumen tres recorridos representativos. No describen cada pantalla: muestran cómo el producto conserva contexto y aplica reglas a medida que cambia el estado."
+          ],
+          "flows": [
+            {
+              "title": "Ciclo formativo",
+              "body": "Conecta la incorporación del alumno con la sesión impartida y su efecto operativo.",
+              "steps": ["Curso", "Enrollment", "Plan activo", "Lección", "Asistencia", "Consumo"]
+            },
+            {
+              "title": "Gestión de bonos",
+              "body": "Convierte una asignación administrativa en un derecho validado y trazable.",
+              "steps": ["Crear bono", "Asignar", "Validar", "Consumir", "Actualizar saldo"]
+            },
+            {
+              "title": "Preparación de clase",
+              "body": "Reúne el contexto académico que necesita la profesora antes y después de una sesión.",
+              "steps": ["Alumno", "Curso", "Objetivos", "Recursos", "Planificación", "Seguimiento"]
+            }
+          ]
+        },
+        "architecture": {
+          "label": "Arquitectura del sistema",
+          "intro": "La arquitectura mantiene una experiencia React ágil, pero sitúa la autoridad de negocio en límites server-side donde las reglas pueden aplicarse de forma consistente.",
+          "paragraphs": [
+            "Next.js aporta la interfaz y la capa de servidor del producto. Las operaciones críticas atraviesan validación, autorización y servicios de dominio antes de modificar el estado persistido en MongoDB mediante Mongoose.",
+            "Esta organización separa lo que la interfaz solicita de lo que el sistema permite. También deja integraciones y almacenamiento detrás de contratos concretos, evitando que detalles externos dicten el modelo del producto."
+          ],
+          "items": [
+            {
+              "title": "Next.js y React",
+              "body": "Una base full-stack para componer la experiencia y ejecutar lógica server-side cerca de cada caso de uso."
+            },
+            {
+              "title": "MongoDB y Mongoose",
+              "body": "Persistencia documental con modelos que expresan relaciones, estados y validaciones del dominio."
+            },
+            {
+              "title": "NextAuth y roles",
+              "body": "Autenticación y control de acceso para que cada operación se evalúe con la identidad y permisos correctos."
+            },
+            {
+              "title": "Zod y límites explícitos",
+              "body": "Validación de entrada antes de que datos incompletos o ambiguos alcancen las reglas críticas."
+            },
+            {
+              "title": "Storage e internacionalización",
+              "body": "Firebase Storage y contenido ES/EN se integran como capacidades del sistema, no como lógica dispersa en componentes."
+            }
+          ]
+        },
+        "domainModeling": {
+          "label": "Modelado de dominio",
+          "intro": "El modelo separa identidad, contexto académico, definición de cursos y eventos operativos para evitar que una sola entidad intente explicar todo el producto.",
+          "paragraphs": [
+            "Un usuario identifica y autentica; un perfil de alumno concentra información académica. Del mismo modo, la definición reutilizable de un curso no equivale a la configuración concreta que se aplica a un grupo o estudiante.",
+            "La lección funciona como evento operativo: conecta planificación, participantes, asistencia, recursos y consecuencias de consumo. Los planes activos y derechos de uso aportan el contexto necesario para decidir si esa operación es válida."
+          ],
+          "items": [
+            {
+              "title": "User",
+              "body": "Identidad, acceso y rol; no absorbe por sí solo todo el contexto académico del estudiante."
+            },
+            {
+              "title": "StudentProfile",
+              "body": "Representa la dimensión académica y permite que evolucione sin acoplarla a autenticación."
+            },
+            {
+              "title": "CourseTemplate y CourseProfile",
+              "body": "Distinguen una definición reutilizable de la configuración que adapta el curso a una experiencia concreta."
+            },
+            {
+              "title": "Lesson",
+              "body": "Materializa el trabajo docente y enlaza planificación, estado, asistencia y seguimiento."
+            },
+            {
+              "title": "Planes y entitlements",
+              "body": "Expresan derechos activos, límites y políticas sin repartir la misma regla entre varias pantallas."
+            }
+          ]
+        },
+        "engineeringDecisions": {
+          "label": "Decisiones de ingeniería",
+          "intro": "Las decisiones más valiosas aparecen donde una implementación cómoda podía comprometer la coherencia del producto.",
+          "paragraphs": [
+            "La evolución técnica se ha centrado en reducir autoridades duplicadas y convertir reglas implícitas en caminos canónicos que puedan probarse, revisarse y reutilizarse."
+          ],
+          "items": [
+            {
+              "title": "Autoridad server-side",
+              "body": "El cliente expresa intención; el servidor reconstruye el contexto, autoriza y decide el cambio válido."
+            },
+            {
+              "title": "Integridad de enrollment",
+              "body": "Una inscripción debe mantener alineados curso, alumno y derechos asociados incluso cuando intervienen varios pasos."
+            },
+            {
+              "title": "Builders canónicos",
+              "body": "La creación de planes y entitlements se centraliza para que distintos flujos no produzcan estructuras divergentes."
+            },
+            {
+              "title": "DTOs y orden explícito",
+              "body": "Los límites relevantes reciben datos deliberados y mantienen predecible el orden de las operaciones con efectos."
+            },
+            {
+              "title": "Políticas como dominio",
+              "body": "Consumo, asistencia y tipos de plan se modelan como reglas configurables en lugar de condicionales dispersos."
+            }
+          ]
+        },
+        "qualityIntegrity": {
+          "label": "Calidad e integridad",
+          "intro": "En este producto, un fallo de integridad no es sólo un error técnico: puede alterar créditos, asistencia o el acceso de un alumno a su formación.",
+          "paragraphs": [
+            "La estrategia de pruebas protege primero las reglas con impacto: enrollment, construcción de derechos, escrituras autoritativas y transiciones que relacionan varias entidades. Las suites completas comprueban después que esas garantías conviven con el resto del sistema.",
+            "Los escenarios de concurrencia obligaron a validar supuestos bajo condiciones más cercanas a producción, incluido el uso de replica set cuando la operación lo requería. Los gates de integridad se ejecutan antes de migraciones o cambios capaces de amplificar datos inconsistentes."
+          ],
+          "items": [
+            {
+              "title": "Tests focalizados",
+              "body": "Casos pequeños y explícitos aíslan la regla que se quiere proteger y facilitan detectar regresiones de dominio."
+            },
+            {
+              "title": "Suites de regresión",
+              "body": "La validación completa comprueba que una mejora local no rompe recorridos que comparten modelos o servicios."
+            },
+            {
+              "title": "Concurrencia",
+              "body": "Las operaciones sensibles se prueban considerando escrituras simultáneas y no sólo el camino secuencial ideal."
+            },
+            {
+              "title": "Gates de cambio",
+              "body": "Las comprobaciones previas evitan ejecutar migraciones o transformaciones sobre un estado que ya incumple invariantes."
+            }
+          ]
+        },
+        "roadmap": {
+          "label": "Estado y roadmap",
+          "intro": "El producto combina una base operativa que ya utiliza la academia con módulos que siguen ampliándose de forma iterativa.",
+          "paragraphs": [
+            "La capa actual cubre autenticación y roles, gestión de alumnos, clases, bonos o créditos, recursos y herramientas administrativas conectadas por reglas comunes.",
+            "La evolución se concentra en profundizar perfiles de curso, preparación y notas de clase, toolbox docente, storefront, calendario de prueba e integraciones adicionales. Cada incorporación debe respetar las mismas garantías de autoridad e integridad."
+          ],
+          "items": [
+            {
+              "title": "Operativo ahora",
+              "body": "Un MVP utilizado en el trabajo diario, con los principales dominios internos y una base técnica preparada para seguir creciendo."
+            },
+            {
+              "title": "En evolución",
+              "body": "Más profundidad pedagógica, automatización e interacción pública sin presentar la hoja de ruta como funcionalidad ya entregada."
+            }
+          ]
+        },
+        "lessons": {
+          "label": "Lecciones aprendidas",
+          "intro": "La principal lección ha sido tratar las reglas operativas como producto y dominio, no como detalles repartidos por la interfaz.",
+          "paragraphs": [
+            "A medida que el LMS crece, la mantenibilidad depende menos de añadir capas y más de elegir una autoridad clara, eliminar caminos duplicados y hacer visibles las invariantes que el negocio necesita conservar."
+          ],
+          "items": [
+            {
+              "title": "Lo simple también forma dominio",
+              "body": "Registrar una clase o asignar un bono parece directo hasta que aparecen estados, permisos y consecuencias relacionadas."
+            },
+            {
+              "title": "Una sola forma de construir",
+              "body": "Duplicar la creación de objetos críticos genera variaciones difíciles de detectar; los builders canónicos reducen esa deriva."
+            },
+            {
+              "title": "Los tests protegen decisiones",
+              "body": "La prueba útil no sólo verifica una función: conserva la regla de negocio cuando cambian modelos y recorridos."
+            },
+            {
+              "title": "El modelo evoluciona con el producto",
+              "body": "Separar conceptos relacionados permite ampliar capacidades sin convertir las entidades iniciales en contenedores ambiguos."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import type { MouseEvent } from "react";
+
+import { preferredScrollBehavior } from "@/lib/motion";
 
 const navigation = {
   es: [
@@ -18,18 +21,33 @@ const navigation = {
   ],
 };
 
-export default function Header() {
+export default function SiteHeader() {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = useLocale() === "en" ? "en" : "es";
   const homePath = `/${currentLocale}`;
   const isHome = pathname === homePath || pathname === `${homePath}/`;
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (!element) return;
-    window.history.replaceState(null, "", `#${id}`);
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  const handleSectionNavigation = (
+    event: MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    if (!isHome) {
+      return;
+    }
+
+    const element = document.getElementById(sectionId);
+    if (!element) {
+      return;
+    }
+
+    event.preventDefault();
+    const hash = `#${sectionId}`;
+    window.history.replaceState(null, "", hash);
+    element.scrollIntoView({
+      behavior: preferredScrollBehavior(),
+      block: "start",
+    });
   };
 
   const changeLocale = (locale: "es" | "en") => {
@@ -61,16 +79,16 @@ export default function Header() {
         </Link>
 
         {navigation[currentLocale].map((item) => (
-          <button
+          <Link
             key={item.section}
-            type="button"
-            onClick={() => scrollToSection(item.section)}
+            href={`${homePath}#${item.section}`}
+            onClick={(event) => handleSectionNavigation(event, item.section)}
             aria-label={item.label}
             className="flex min-h-11 items-center gap-1.5 rounded-xl px-2 text-xs font-semibold transition-colors hover:bg-[var(--hero-lime-subtle)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--hero-forest)] sm:min-h-10 sm:px-3 sm:text-sm"
           >
             <FontAwesomeIcon icon={item.icon} aria-hidden="true" />
             <span className="max-[439px]:sr-only">{item.label}</span>
-          </button>
+          </Link>
         ))}
 
         <a
@@ -86,6 +104,7 @@ export default function Header() {
 
         <div
           className="ml-0.5 flex items-center border-l border-[var(--hero-border)] pl-1 sm:ml-1 sm:pl-2"
+          role="group"
           aria-label={
             currentLocale === "es" ? "Cambiar idioma" : "Change language"
           }

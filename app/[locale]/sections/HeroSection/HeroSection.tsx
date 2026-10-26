@@ -2,8 +2,12 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowDownRight, Download, MapPin } from "lucide-react";
+import {
+  preferredScrollBehavior,
+  usePrefersReducedMotion,
+} from "@/lib/motion";
 import michaelPhoto from "@/public/MichaelMainPhoto.png";
 
 interface HeroSectionProps {
@@ -26,7 +30,7 @@ const technologies: Technology[] = [
 export default function HeroSection({ locale }: HeroSectionProps) {
   const t = useTranslations("Hero");
   const u = useTranslations("ui");
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion();
   const cvFile =
     locale === "es"
       ? "ESPJul26MichaelRodriguezSoftwareDeveloper.pdf"
@@ -35,7 +39,10 @@ export default function HeroSection({ locale }: HeroSectionProps) {
   const scrollToProjects = () =>
     document
       .getElementById("projects-section")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      ?.scrollIntoView({
+        behavior: preferredScrollBehavior(),
+        block: "start",
+      });
 
   return (
     <section
@@ -45,7 +52,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
       <div className="mx-auto w-full min-w-0 max-w-7xl">
         <div className="grid min-w-0 items-center gap-7 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,.95fr)] lg:gap-8">
           <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: prefersReducedMotion ? 0 : 0.65,
@@ -124,7 +131,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
           </motion.div>
 
           <motion.div
-            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.98 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: prefersReducedMotion ? 0 : 0.7,
@@ -148,7 +155,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
         </div>
 
         <motion.section
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: prefersReducedMotion ? 0 : 0.55,

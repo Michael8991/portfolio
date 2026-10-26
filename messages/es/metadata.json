@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "global": {
+      "title": "Portfolio de Michael Rodríguez",
+      "description": "Portfolio de Michael Rodríguez, desarrollador full-stack especializado en React, Next.js, TypeScript y Node.js."
+    },
+    "home": {
+      "title": "Michael Rodríguez — Desarrollador Full-Stack",
+      "description": "Portfolio de Michael Rodríguez, desarrollador full-stack especializado en React, Next.js, TypeScript y Node.js, con proyectos web y productos de software construidos de extremo a extremo.",
+      "imageAlt": "Michael Rodríguez, desarrollador full-stack"
+    },
+    "projects": {
+      "academy": {
+        "title": "CostaSpanish Academy — Caso de estudio web",
+        "description": "Caso de estudio sobre la estrategia, experiencia responsive, SEO técnico y desarrollo de la web comercial bilingüe de CostaSpanish Academy.",
+        "imageAlt": "Vista responsive de la web comercial CostaSpanish Academy"
+      },
+      "lms": {
+        "title": "CostaSpanish LMS — Caso de estudio de producto",
+        "description": "Caso de estudio del LMS de CostaSpanish: producto, flujos, arquitectura, modelado de dominio y decisiones de ingeniería de una plataforma educativa en uso.",
+        "imageAlt": "Panel de gestión de CostaSpanish LMS en varios dispositivos"
+      }
+    },
+    "demo": {
+      "title": "Demo de CostaSpanish LMS",
+      "description": "Página auxiliar de la demostración de CostaSpanish LMS, actualmente en construcción."
+    }
+  }
+}

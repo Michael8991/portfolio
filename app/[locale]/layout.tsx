@@ -1,14 +1,15 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Montserrat, Anton, Orbitron, Pinyon_Script } from "next/font/google";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 
+import { SiteHeader } from "@/components/Header";
 import { locales } from "@/i18n/routing";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -29,7 +30,6 @@ const anton = Anton({
 const orbitron = Orbitron({
   subsets: ["latin"],
   variable: "--font-orbitron",
-  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -37,6 +37,26 @@ type LocaleLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: LocaleLayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!hasLocale(locales, locale)) {
+    notFound();
+  }
+
+  const t = await getTranslations({ locale, namespace: "metadata.global" });
+
+  return {
+    title: {
+      default: t("title"),
+      template: "%s | Michael Rodríguez",
+    },
+    description: t("description"),
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -57,6 +77,7 @@ export default async function LocaleLayout({
     >
       <body>
         <NextIntlClientProvider messages={messages}>
+          <SiteHeader />
           {children}
         </NextIntlClientProvider>
       </body>

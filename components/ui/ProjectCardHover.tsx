@@ -1,18 +1,15 @@
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 
 export default function ProjectCardHover({
   image,
   alt,
   title,
   category,
-  url,
 }: {
   image: StaticImageData;
   alt: string;
   title: string;
   category: string;
-  url: string;
 }) {
   return (
     <div className="w-full h-64 relative hover:scale-130 group cursor-pointer transition duration-300 ease-in-out">

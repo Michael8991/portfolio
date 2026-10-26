@@ -1,7 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+
+import { usePrefersReducedMotion } from "@/lib/motion";
 
 type Translation = ReturnType<typeof useTranslations>;
 
@@ -151,16 +153,17 @@ function buildContent(t: Translation) {
 
 export default function AboutSection() {
   const t = useTranslations("aboutMe");
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion();
   const content = buildContent(t);
-  const motionProps = prefersReducedMotion
-    ? { initial: false as const, animate: "visible" as const }
-    : {
-        initial: "hidden" as const,
-        whileInView: "visible" as const,
-        viewport: { once: true, amount: 0.12 },
-        transition: { duration: 0.45, ease: "easeOut" as const },
-      };
+  const motionProps = {
+    initial: "hidden" as const,
+    whileInView: "visible" as const,
+    viewport: { once: true, amount: 0.12 },
+    transition: {
+      duration: prefersReducedMotion ? 0 : 0.45,
+      ease: "easeOut" as const,
+    },
+  };
 
   return (
     <section

@@ -7,10 +7,12 @@ import enCatalogCaseStudy from "@/messages/en/projects/catalogCaseStudy.json";
 import esCatalogCaseStudy from "@/messages/es/projects/catalogCaseStudy.json";
 import enUi from "@/messages/en/ui/ui.json";
 import esUi from "@/messages/es/ui/ui.json";
-import enAboutMe from "@/messages/en/home/aboutMe.json"
-import esAboutMe from "@/messages/es/home/aboutMe.json"
-import esDocSection from "@/messages/es/projects/docSections.json"
-import enDocSection from "@/messages/en/projects/docSections.json"
+import enAboutMe from "@/messages/en/home/aboutMe.json";
+import esAboutMe from "@/messages/es/home/aboutMe.json";
+import esCaseStudies from "@/messages/es/projects/caseStudies.json";
+import enCaseStudies from "@/messages/en/projects/caseStudies.json";
+import esMetadata from "@/messages/es/metadata.json";
+import enMetadata from "@/messages/en/metadata.json";
 
 const messagesByLocale = {
   en: {
@@ -18,14 +20,16 @@ const messagesByLocale = {
     ...enCatalogCaseStudy,
     ...enUi,
     ...enAboutMe,
-    ...enDocSection,
+    ...enCaseStudies,
+    ...enMetadata,
   },
   es: {
     ...esHome,
     ...esCatalogCaseStudy,
     ...esUi,
     ...esAboutMe,
-    ...esDocSection,
+    ...esCaseStudies,
+    ...esMetadata,
   },
 } satisfies Record<Locale, Record<string, unknown>>;
 
