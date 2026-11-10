@@ -25,6 +25,26 @@
       "linkedin": "Michael Rodríguez on LinkedIn",
       "github": "Michael Rodríguez on GitHub"
     },
-    "copyrightName": "Michael Rodríguez"
+    "copyrightName": "Michael Rodríguez",
+    "privacy": "Privacy"
+  },
+  "Privacy": {
+    "eyebrow": "Information",
+    "title": "Privacy and audience measurement",
+    "intro": "This portfolio uses limited audience measurement to understand which pages are useful, without advertising profiles or cross-site tracking.",
+    "audienceTitle": "Audience measurement",
+    "audienceBody": "Vercel Web Analytics loads only in production and records page views and navigation between routes. This provides aggregated traffic figures for the portfolio and specific case studies such as CostaSpanish LMS.",
+    "dataTitle": "Data processed",
+    "dataBody": "According to Vercel, the service uses aggregated data such as the visited route, timestamp, referrer, approximate location, browser, and device type. It does not use third-party cookies or associate statistics with an individual IP address. The request-hash-based session is discarded after 24 hours.",
+    "languageTitle": "Language preference",
+    "languageBody": "The internationalisation system may store the functional NEXT_LOCALE cookie to retain the selected language. This cookie is not used for analytics, advertising, or cross-site tracking.",
+    "limitsTitle": "Limits of this implementation",
+    "limitsBody": "No custom events, names, email addresses, identifiers, or tokens are sent. No additional fingerprinting, Google Analytics, advertising pixels, or server-side tracking are used. The portfolio's public routes do not contain personal data.",
+    "providerTitle": "Provider and further information",
+    "providerBody": "Measurement is provided by Vercel, which also hosts the portfolio. You can read the Vercel Web Analytics privacy documentation for the data and safeguards described by the provider.",
+    "providerLink": "Vercel Web Analytics privacy",
+    "contactTitle": "Contact",
+    "contactBody": "For questions about this audience measurement, you can write to",
+    "backHome": "Back to the portfolio"
   }
 }

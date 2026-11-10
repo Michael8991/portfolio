@@ -5,6 +5,7 @@ import { absoluteUrl, localizedPath } from "@/lib/seo";
 
 const indexablePaths = [
   "",
+  "/privacy",
   ...featuredCaseStudies.map((caseStudy) => caseStudy.route),
 ];
 

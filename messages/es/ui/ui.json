@@ -26,6 +26,26 @@
       "linkedin": "LinkedIn de Michael Rodríguez",
       "github": "GitHub de Michael Rodríguez"
     },
-    "copyrightName": "Michael Rodríguez"
+    "copyrightName": "Michael Rodríguez",
+    "privacy": "Privacidad"
+  },
+  "Privacy": {
+    "eyebrow": "Información",
+    "title": "Privacidad y medición de audiencia",
+    "intro": "Este portfolio utiliza una medición de audiencia limitada para entender qué páginas resultan útiles, sin incorporar perfiles publicitarios ni seguimiento entre sitios.",
+    "audienceTitle": "Medición de audiencia",
+    "audienceBody": "Vercel Web Analytics se carga únicamente en producción y registra páginas vistas y navegación entre rutas. Esto permite conocer, de forma agregada, las visitas al portfolio y a casos de estudio concretos como CostaSpanish LMS.",
+    "dataTitle": "Datos tratados",
+    "dataBody": "Según Vercel, el servicio utiliza datos agregados como la ruta visitada, fecha, referente, ubicación aproximada, navegador y tipo de dispositivo. No utiliza cookies de terceros ni asocia las estadísticas a una dirección IP individual. La sesión basada en un hash de la solicitud se descarta después de 24 horas.",
+    "languageTitle": "Preferencia de idioma",
+    "languageBody": "El sistema de internacionalización puede guardar la cookie funcional NEXT_LOCALE para mantener el idioma seleccionado. Esta cookie no se utiliza para analítica, publicidad ni seguimiento entre sitios.",
+    "limitsTitle": "Límites de esta implementación",
+    "limitsBody": "No se envían eventos personalizados, nombres, correos, identificadores o tokens. Tampoco se utilizan técnicas adicionales de fingerprinting, Google Analytics, píxeles publicitarios ni seguimiento del lado servidor. Las rutas públicas del portfolio no incluyen datos personales.",
+    "providerTitle": "Proveedor y más información",
+    "providerBody": "La medición es prestada por Vercel, que también aloja el portfolio. Puedes consultar la documentación de privacidad de Vercel Web Analytics para conocer los datos y garantías descritos por el proveedor.",
+    "providerLink": "Privacidad de Vercel Web Analytics",
+    "contactTitle": "Contacto",
+    "contactBody": "Para cualquier consulta relacionada con esta medición puedes escribir a",
+    "backHome": "Volver al portfolio"
   }
 }

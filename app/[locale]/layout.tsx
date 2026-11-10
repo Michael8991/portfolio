@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Montserrat, Anton, Orbitron, Pinyon_Script } from "next/font/google";
 import { getMessages, getTranslations } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
 
 import { SiteHeader } from "@/components/Header";
 import { locales } from "@/i18n/routing";
@@ -69,6 +70,7 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const isVercelProduction = process.env.VERCEL_ENV === "production";
 
   return (
     <html
@@ -80,6 +82,7 @@ export default async function LocaleLayout({
           <SiteHeader />
           {children}
         </NextIntlClientProvider>
+        {isVercelProduction ? <Analytics /> : null}
       </body>
     </html>
   );

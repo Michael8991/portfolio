@@ -3,7 +3,8 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 import { preferredScrollBehavior } from "@/lib/motion";
 
@@ -24,6 +25,7 @@ const professionalProfiles = [
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (id: string) => {
@@ -125,10 +127,16 @@ export default function Footer() {
           </section>
         </div>
 
-        <div className="mt-8 border-t border-stone-950/[0.07] py-4">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-stone-950/[0.07] py-4">
           <p className="text-xs text-[#5E5A54]/85">
             © {currentYear} {t("copyrightName")}
           </p>
+          <Link
+            href={`/${locale}/privacy`}
+            className="inline-flex min-h-11 items-center text-xs font-medium text-[#5E5A54]/85 transition-colors hover:text-[#c94f17] focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c94f17]"
+          >
+            {t("privacy")}
+          </Link>
         </div>
       </div>
     </footer>
