@@ -1,6 +1,8 @@
 import Image, { type StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 
+import ZoomableImage from "./ZoomableImage";
+
 export interface MediaBlockProps {
   src: StaticImageData;
   alt: string;
@@ -9,6 +11,8 @@ export interface MediaBlockProps {
   eyebrow?: ReactNode;
   sizes: string;
   priority?: boolean;
+  expandLabel?: string;
+  closeLabel?: string;
   className?: string;
 }
 
@@ -20,6 +24,8 @@ export default function MediaBlock({
   eyebrow,
   sizes,
   priority = false,
+  expandLabel,
+  closeLabel,
   className = "",
 }: MediaBlockProps) {
   return (
@@ -28,13 +34,24 @@ export default function MediaBlock({
       className={`overflow-hidden rounded-[clamp(1.25rem,3vw,2rem)] bg-[var(--hero-surface-strong)] shadow-[0_20px_60px_rgba(23,59,46,0.08)] ${className}`}
     >
       <div className="overflow-hidden border border-[var(--hero-border)] bg-[var(--hero-background)]">
-        <Image
-          src={src}
-          alt={alt}
-          sizes={sizes}
-          priority={priority}
-          className="h-auto w-full object-cover"
-        />
+        {expandLabel && closeLabel ? (
+          <ZoomableImage
+            src={src}
+            alt={alt}
+            sizes={sizes}
+            priority={priority}
+            expandLabel={expandLabel}
+            closeLabel={closeLabel}
+          />
+        ) : (
+          <Image
+            src={src}
+            alt={alt}
+            sizes={sizes}
+            priority={priority}
+            className="h-auto w-full object-cover"
+          />
+        )}
       </div>
 
       <figcaption className="grid gap-3 border-x border-b border-[var(--hero-border)] px-5 py-5 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] sm:gap-8 sm:px-7 sm:py-6">

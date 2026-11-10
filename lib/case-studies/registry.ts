@@ -2,6 +2,10 @@ import academyResponsiveMockup from "@/public/CostaSpanishAcademy/mockupversionm
 import academyRedesignMockup from "@/public/CostaSpanishAcademy/mockcostaspanishredesign.png";
 import academyPreviousLanding from "@/public/CostaSpanishAcademy/CostaSpanishAcademyMain.png";
 import lmsMockup from "@/public/CostaSpanishAcademy/MockCostaSpanishLMS.png";
+import lmsDashboard from "@/public/CostaSpanishAcademy/LMS Demo/Demo LMS - Dashboard.png";
+import lmsGroupSummary from "@/public/CostaSpanishAcademy/LMS Demo/Demo LMS - Grupo Resumen.png";
+import lmsClassBook from "@/public/CostaSpanishAcademy/LMS Demo/Demo LMS - Libro de clases.png";
+import lmsPlans from "@/public/CostaSpanishAcademy/LMS Demo/Demo LMS - Planes.png";
 
 import type {
   CaseStudyDefinition,
@@ -72,6 +76,28 @@ export const caseStudyRegistry = {
         src: lmsMockup,
         altKey: "media.dashboard.alt",
       },
+      supporting: [
+        {
+          id: "lms-dashboard-capture",
+          src: lmsDashboard,
+          altKey: "media.dashboardCapture.alt",
+        },
+        {
+          id: "lms-group-summary",
+          src: lmsGroupSummary,
+          altKey: "media.groupSummary.alt",
+        },
+        {
+          id: "lms-plans",
+          src: lmsPlans,
+          altKey: "media.plans.alt",
+        },
+        {
+          id: "lms-class-book",
+          src: lmsClassBook,
+          altKey: "media.classBook.alt",
+        },
+      ],
     },
     sections: [
       { id: "product", labelKey: "sections.product.label" },

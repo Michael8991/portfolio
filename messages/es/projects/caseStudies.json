@@ -151,7 +151,9 @@
     },
     "lms": {
       "actions": {
-        "demo": "Ver demo"
+        "demo": "Ver demo",
+        "expandImage": "Ampliar captura",
+        "closeImage": "Cerrar"
       },
       "media": {
         "dashboard": {
@@ -159,6 +161,30 @@
           "eyebrow": "Producto en uso",
           "title": "Una operativa conectada, no una colección de pantallas",
           "caption": "Las vistas de clases, economía y planificación comparten el mismo contexto operativo. El objetivo del sistema es que alumnos, sesiones, asistencia, créditos y cobros formen parte de un flujo consistente."
+        },
+        "dashboardCapture": {
+          "alt": "Dashboard de CostaSpanish LMS con acciones rápidas, alertas operativas, métricas, próximas clases y tareas",
+          "eyebrow": "Visión operativa",
+          "title": "El trabajo del día, en contexto",
+          "caption": "El dashboard reúne agenda, tareas, acciones rápidas y señales que requieren atención. La vista permite pasar de una lectura general de la academia a la siguiente acción sin perder el contexto."
+        },
+        "groupSummary": {
+          "alt": "Resumen de un grupo en CostaSpanish LMS con próxima clase, actividad reciente, alumnado, planes y currículum",
+          "eyebrow": "Gestión académica",
+          "title": "Cada curso concentra su actividad académica",
+          "caption": "El resumen de grupo conecta la próxima clase y la actividad reciente con las áreas de alumnado, planes, currículum y configuración. La organización sigue el curso, no una suma de pantallas aisladas."
+        },
+        "plans": {
+          "alt": "Gestión de planes de un curso en CostaSpanish LMS con coberturas actuales y futuras, pagos y estados de atención",
+          "eyebrow": "Lógica de negocio",
+          "title": "Cobertura y pagos forman parte del mismo estado",
+          "caption": "La vista de planes muestra la cobertura de cada alumno, los periodos actuales y futuros y los estados de pago. Las acciones de gestión se presentan junto a la información que permite decidir qué corresponde hacer."
+        },
+        "classBook": {
+          "alt": "Libro de clases de CostaSpanish LMS con filtros, métricas y tabla de sesiones planificadas y completadas",
+          "eyebrow": "Seguimiento operativo",
+          "title": "Un registro legible de clases, asistencia y consumo",
+          "caption": "El libro de clases permite filtrar sesiones y revisar en una misma tabla su estado, participantes, asistencia, duración y créditos consumidos. La ampliación conserva la legibilidad de esta vista más densa."
         }
       },
       "sections": {

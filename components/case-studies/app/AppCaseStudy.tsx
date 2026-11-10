@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 
@@ -39,6 +39,37 @@ interface AppMediaContent {
   title: string;
   caption: string;
 }
+
+interface AppSectionMedia {
+  src: StaticImageData;
+  alt: string;
+  content: AppMediaContent;
+}
+
+const lmsSectionMedia = {
+  product: [
+    {
+      assetId: "lms-dashboard-capture",
+      contentKey: "media.dashboardCapture",
+    },
+  ],
+  modules: [
+    {
+      assetId: "lms-group-summary",
+      contentKey: "media.groupSummary",
+    },
+  ],
+  flows: [
+    {
+      assetId: "lms-plans",
+      contentKey: "media.plans",
+    },
+    {
+      assetId: "lms-class-book",
+      contentKey: "media.classBook",
+    },
+  ],
+} as const;
 
 function AppSectionBody({
   content,
@@ -126,6 +157,31 @@ export default async function AppCaseStudy({
   const contentT = await getTranslations(caseStudy.content.namespace);
   const mediaContent = contentT.raw("media.dashboard") as AppMediaContent;
 
+  function getSectionMedia(sectionId: string): readonly AppSectionMedia[] {
+    if (caseStudy.key !== "lms") return [];
+
+    const definitions =
+      lmsSectionMedia[sectionId as keyof typeof lmsSectionMedia];
+
+    if (!definitions) return [];
+
+    return definitions.flatMap((definition) => {
+      const asset = caseStudy.media.supporting?.find(
+        (item) => item.id === definition.assetId,
+      );
+
+      if (!asset) return [];
+
+      return [
+        {
+          src: asset.src,
+          alt: contentT(asset.altKey),
+          content: contentT.raw(definition.contentKey) as AppMediaContent,
+        },
+      ];
+    });
+  }
+
   return (
     <CaseStudyLayout
       hero={
@@ -177,7 +233,7 @@ export default async function AppCaseStudy({
       {caseStudy.sections.map((section, index) => {
         const sectionContentKey = section.labelKey.replace(/\.label$/, "");
         const content = contentT.raw(sectionContentKey) as AppSectionContent;
-        const isProductSection = section.id === "product";
+        const sectionMedia = getSectionMedia(section.id);
 
         return (
           <ContentSection
@@ -190,15 +246,22 @@ export default async function AppCaseStudy({
             <AppSectionBody
               content={content}
               media={
-                isProductSection ? (
-                  <MediaBlock
-                    src={caseStudy.media.cover.src}
-                    alt={mediaContent.alt}
-                    eyebrow={mediaContent.eyebrow}
-                    title={mediaContent.title}
-                    caption={mediaContent.caption}
-                    sizes="(max-width: 1179px) calc(100vw - 3rem), (max-width: 1439px) calc(100vw - 24rem), 62rem"
-                  />
+                sectionMedia.length ? (
+                  <div className="space-y-8 sm:space-y-10">
+                    {sectionMedia.map((media) => (
+                      <MediaBlock
+                        key={media.alt}
+                        src={media.src}
+                        alt={media.alt}
+                        eyebrow={media.content.eyebrow}
+                        title={media.content.title}
+                        caption={media.content.caption}
+                        sizes="(max-width: 1179px) calc(100vw - 3rem), (max-width: 1439px) calc(100vw - 24rem), 62rem"
+                        expandLabel={contentT("actions.expandImage")}
+                        closeLabel={contentT("actions.closeImage")}
+                      />
+                    ))}
+                  </div>
                 ) : undefined
               }
             />

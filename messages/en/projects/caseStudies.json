@@ -151,7 +151,9 @@
     },
     "lms": {
       "actions": {
-        "demo": "View demo"
+        "demo": "View demo",
+        "expandImage": "Expand screenshot",
+        "closeImage": "Close"
       },
       "media": {
         "dashboard": {
@@ -159,6 +161,30 @@
           "eyebrow": "Product in use",
           "title": "Connected operations, not a collection of screens",
           "caption": "Class, finance, and planning views share the same operational context. The system is designed so learners, sessions, attendance, credits, and payments remain part of one consistent flow."
+        },
+        "dashboardCapture": {
+          "alt": "CostaSpanish LMS dashboard with quick actions, operational alerts, metrics, upcoming classes, and tasks",
+          "eyebrow": "Operational overview",
+          "title": "The day's work, in context",
+          "caption": "The dashboard brings together the agenda, tasks, quick actions, and signals that need attention. It moves from an academy-wide overview to the next action without losing context."
+        },
+        "groupSummary": {
+          "alt": "CostaSpanish LMS group summary with the next class, recent activity, learners, plans, and curriculum",
+          "eyebrow": "Academic management",
+          "title": "Each course concentrates its academic activity",
+          "caption": "The group summary connects the next class and recent activity with learners, plans, curriculum, and settings. The organisation follows the course rather than a set of isolated screens."
+        },
+        "plans": {
+          "alt": "CostaSpanish LMS course plan management with current and upcoming coverage, payments, and attention states",
+          "eyebrow": "Business logic",
+          "title": "Coverage and payments share the same state",
+          "caption": "The plans view shows each learner's coverage, current and upcoming periods, and payment states. Management actions sit beside the information needed to decide what should happen next."
+        },
+        "classBook": {
+          "alt": "CostaSpanish LMS class book with filters, metrics, and a table of planned and completed sessions",
+          "eyebrow": "Operational tracking",
+          "title": "A readable record of classes, attendance, and usage",
+          "caption": "The class book filters sessions and presents their status, participants, attendance, duration, and consumed credits in one table. Expansion preserves the legibility of this denser view."
         }
       },
       "sections": {
